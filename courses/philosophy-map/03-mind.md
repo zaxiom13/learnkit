@@ -14,6 +14,21 @@ section: Mind
 | **Integrated Information Theory** (Tononi) | consciousness = integrated information Φ |
 | **Global Workspace Theory** (Baars, Dehaene) | consciousness = information broadcast across the brain |
 
+<figure class="diagram">
+<svg viewBox="0 0 640 200">
+<rect x="180" y="30" width="280" height="140" rx="10" fill="var(--surface-2)" stroke="var(--line-strong)" stroke-width="2"/>
+<text x="320" y="22" text-anchor="middle" font-size="12" font-weight="700">the Chinese Room</text>
+<text x="320" y="95" text-anchor="middle" font-size="30" class="bob">🧑📖</text>
+<text x="320" y="130" text-anchor="middle" font-size="11">follows a rulebook: "if you see 你好, write 你好！"</text>
+<text x="320" y="148" text-anchor="middle" font-size="11">understands no Chinese</text>
+<rect x="30" y="80" width="80" height="34" rx="8" fill="var(--accent)"/><text x="70" y="102" text-anchor="middle" font-size="15" style="fill:#fff">你好?</text>
+<rect x="530" y="80" width="80" height="34" rx="8" fill="var(--good)"/><text x="570" y="102" text-anchor="middle" font-size="15" style="fill:#fff">你好！</text>
+<path d="M110 97 H180" stroke="var(--accent)" stroke-width="3" class="flow"/><path d="M460 97 H530" stroke="var(--good)" stroke-width="3" class="flow"/>
+<text x="320" y="192" text-anchor="middle" font-size="11.5">outside, it looks fluent. Does anything in the room understand? (Searle says no; the "systems reply" says the whole room does)</text>
+</svg>
+<figcaption>Searle's 1980 argument, now aimed squarely at language models.</figcaption>
+</figure>
+
 ## Famous thought experiments
 
 - **What is it like to be a bat?** (Nagel 1974): subjective experience resists objective description.
@@ -22,6 +37,10 @@ section: Mind
 - **Chinese room** (Searle 1980): symbol manipulation isn't understanding — the argument now aimed at LLMs.
 - **Philosophical zombies**: physically identical, no experience — conceivable?
 - **Turing test** (1950): replace "can machines think?" with "can they converse indistinguishably?"
+
+```viz neuron
+> What the physicalist says a thought is made of: spikes. One leaky integrate-and-fire neuron, of 86 billion.
+```
 
 ## Free will
 

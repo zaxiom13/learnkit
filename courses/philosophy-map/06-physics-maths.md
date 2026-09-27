@@ -15,6 +15,10 @@ section: Knowing
 | **Laws of nature** | regularities (Humean) vs necessities |
 | **Fine-tuning** | constants seem tuned for life: design, multiverse + anthropic selection, or just luck? |
 
+```viz lightcone
+> Why relativity pushes people toward the block universe: events outside your light cone have no agreed time order.
+```
+
 ## Mathematics
 
 | view | maths is… |
@@ -27,6 +31,10 @@ section: Knowing
 | **Fictionalism** | a useful fiction |
 
 **Wigner (1960)**: "The unreasonable effectiveness of mathematics in the natural sciences" — why do abstract structures invented for their beauty (complex numbers, group theory, Riemannian geometry) later describe nature exactly?
+
+```viz diagonal
+> The kind of argument that divides Platonists from intuitionists: Cantor's proof by diagonalisation.
+```
 
 ```choice
 ? Which view of mathematics rejects proofs by contradiction for existence claims (you must construct the object)?

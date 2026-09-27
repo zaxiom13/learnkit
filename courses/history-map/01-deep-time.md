@@ -16,9 +16,33 @@ section: Beginnings
 | ~12,000 | farming begins in the Fertile Crescent (and later independently in China, Mesoamerica, the Andes, New Guinea…) |
 | ~5,000 | writing (Sumerian cuneiform, Egyptian hieroglyphs); first cities and states |
 
+```viz timeline log=1
+13800000000 | Big Bang | 13.8 billion years ago |
+4500000000 | Earth forms | 4.5 billion years ago |
+3700000000 | First life | ~3.7 billion years ago | single cells
+540000000 | Cambrian explosion | 540 million years ago | animal body plans appear
+66000000 | Dinosaurs end | 66 million years ago | asteroid impact at Chicxulub
+300000 | Homo sapiens | ~300,000 years ago | Africa
+65000 | People reach Australia | ~65,000 years ago | among the oldest continuous cultures on Earth
+12000 | Farming | ~12,000 years ago | Fertile Crescent, then independently elsewhere
+5000 | Writing & cities | ~5,000 years ago | Sumer, Egypt
+250 | Industrial revolution | ~250 years ago |
+1 | Now | today |
+> Deep time on a log scale. On a linear scale all of human history would be one invisible pixel at the right edge.
+```
+
 ## The agricultural revolution
 
 Farming allowed **surplus** → **cities** → **specialists** (priests, soldiers, scribes) → **states, taxes, writing** (first used for accounting). Also brought inequality, disease from livestock, and harder labour — which is why some historians (e.g. Jared Diamond, Yuval Harari) have called it a mixed blessing.
+
+<figure class="diagram">
+<svg viewBox="0 0 640 170">
+<g font-size="12">
+<g class="bob" style="animation-delay:0.0s"><circle cx="60" cy="70" r="36" fill="var(--warn)"/><text x="60" y="75" text-anchor="middle" font-size="24">🌾</text><text x="60" y="126" text-anchor="middle">surplus grain</text></g><g class="bob" style="animation-delay:0.25s"><circle cx="165" cy="70" r="36" fill="var(--good)"/><text x="165" y="75" text-anchor="middle" font-size="24">🏘️</text><text x="165" y="126" text-anchor="middle">cities</text></g><g class="bob" style="animation-delay:0.5s"><circle cx="270" cy="70" r="36" fill="var(--accent)"/><text x="270" y="75" text-anchor="middle" font-size="24">🛠️</text><text x="270" y="126" text-anchor="middle">specialists</text></g><g class="bob" style="animation-delay:0.75s"><circle cx="375" cy="70" r="36" fill="#7b43c9"/><text x="375" y="75" text-anchor="middle" font-size="24">👑</text><text x="375" y="126" text-anchor="middle">states & taxes</text></g><g class="bob" style="animation-delay:1.0s"><circle cx="480" cy="70" r="36" fill="var(--coral)"/><text x="480" y="75" text-anchor="middle" font-size="24">📜</text><text x="480" y="126" text-anchor="middle">writing</text></g><g class="bob" style="animation-delay:1.25s"><circle cx="585" cy="70" r="36" fill="var(--text-3)"/><text x="585" y="75" text-anchor="middle" font-size="24">⚔️</text><text x="585" y="126" text-anchor="middle">armies</text></g><path d="M96 70 H129" stroke="var(--text-3)" stroke-width="3" class="flow"/><path d="M201 70 H234" stroke="var(--text-3)" stroke-width="3" class="flow"/><path d="M306 70 H339" stroke="var(--text-3)" stroke-width="3" class="flow"/><path d="M411 70 H444" stroke="var(--text-3)" stroke-width="3" class="flow"/><path d="M516 70 H549" stroke="var(--text-3)" stroke-width="3" class="flow"/>
+<text x="320" y="160" text-anchor="middle" font-size="11.5" opacity="0.8">the agricultural package: each step makes the next possible</text>
+</g></svg>
+<figcaption>Why farming changed everything: a surplus lets some people stop farming.</figcaption>
+</figure>
 
 ## Frameworks for "why did history go this way?"
 

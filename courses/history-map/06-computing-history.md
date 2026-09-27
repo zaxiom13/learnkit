@@ -32,6 +32,24 @@ section: The modern turn
 | **Tim Berners-Lee** | the Web (HTTP, HTML, URLs) |
 | **Hinton, LeCun, Bengio** | deep learning (Turing Award 2018) |
 
+```viz timeline
+1843 | Lovelace's notes | 1843 | the first published algorithm
+1936 | Turing machines | 1936 |
+1945 | ENIAC | 1945 | 18,000 vacuum tubes
+1947 | Transistor | 1947 | Bell Labs
+1949 | CSIRAC | 1949 | Australia's first computer; played music in 1951
+1958 | Integrated circuit | 1958 | Kilby / Noyce
+1969 | ARPANET, Unix, Moon | 1969 | a big year
+1971 | Microprocessor | 1971 | Intel 4004
+1981 | IBM PC | 1981 |
+1991 | World Wide Web | 1991 | public release
+2007 | iPhone | 2007 |
+2012 | AlexNet | 2012 | deep learning takes off on GPUs
+2017 | Transformer | 2017 | "Attention Is All You Need"
+2022 | ChatGPT | Nov 2022 |
+> Play the history of computing.
+```
+
 **Australian angle**: **CSIRAC** (1949) was one of the first stored-program computers and the first to play music; CSIRO's radio-astronomy work led to a key Wi-Fi patent.
 
 ```answer
@@ -39,6 +57,16 @@ section: The modern turn
 = Tim Berners-Lee
 = Tim Berners Lee
 = Berners-Lee
+```
+
+```viz bars log=1 title="Moore's law"
+Intel 4004 (1971) | 2300
+Apple II (1977) CPU | 3500
+Intel 386 (1985) | 275000
+Pentium 4 (2000) | 42000000
+Apple M1 (2020) | 16000000000
+NVIDIA B200 (2024) | 208000000000
+> Transistors per chip, log scale: about 10⁸× in half a century.
 ```
 
 ```choice

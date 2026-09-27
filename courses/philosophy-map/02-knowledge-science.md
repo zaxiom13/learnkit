@@ -15,6 +15,15 @@ section: Knowing
 | **Bayesian epistemology** | degrees of belief updated by evidence; the modern default in many fields |
 | **Gettier (1963)** | justified true belief isn't enough for knowledge — one of the shortest famous papers ever |
 
+<figure class="diagram">
+<svg viewBox="0 0 640 200">
+<g font-size="12">
+<path d="M40 150 C120 150 140 140 180 130 C230 118 250 60 300 40 C350 60 360 130 400 140 C440 150 460 150 600 150" fill="none" stroke="var(--line-strong)" stroke-width="2"/>
+<g><circle cx="90" cy="110" r="16" fill="var(--good)" class="pulse" style="animation-delay:0.0s"/><text x="90" y="146" text-anchor="middle" font-size="11.5" font-weight="700">normal science</text><text x="90" y="161" text-anchor="middle" font-size="10.5">puzzle-solving</text></g><g><circle cx="200" cy="90" r="16" fill="var(--warn)" class="pulse" style="animation-delay:0.5s"/><text x="200" y="126" text-anchor="middle" font-size="11.5" font-weight="700">anomalies</text><text x="200" y="141" text-anchor="middle" font-size="10.5">pile up</text></g><g><circle cx="300" cy="30" r="16" fill="var(--bad)" class="pulse" style="animation-delay:1.0s"/><text x="300" y="66" text-anchor="middle" font-size="11.5" font-weight="700">crisis</text><text x="300" y="81" text-anchor="middle" font-size="10.5">doubt the paradigm</text></g><g><circle cx="410" cy="90" r="16" fill="var(--coral)" class="pulse" style="animation-delay:1.5s"/><text x="410" y="126" text-anchor="middle" font-size="11.5" font-weight="700">revolution</text><text x="410" y="141" text-anchor="middle" font-size="10.5">new paradigm</text></g><g><circle cx="530" cy="110" r="16" fill="var(--accent)" class="pulse" style="animation-delay:2.0s"/><text x="530" y="146" text-anchor="middle" font-size="11.5" font-weight="700">new normal science</text><text x="530" y="161" text-anchor="middle" font-size="10.5">…repeat</text></g>
+</g></svg>
+<figcaption>Kuhn's cycle of science. Examples: Ptolemy → Copernicus, Newton → Einstein, classical → quantum.</figcaption>
+</figure>
+
 **Scientific realism vs anti-realism**: are electrons real, or just useful fictions? The **no-miracles argument** (success would be a miracle if theories weren't roughly true) vs **pessimistic meta-induction** (most past theories turned out false).
 
 ```choice
@@ -29,6 +38,10 @@ section: Knowing
 - [x] Quine–Duhem: you can adjust auxiliary assumptions instead of abandoning the core theory // And it worked — neutrinos were found in 1956.
 - [ ] Falsification requires abandoning conservation of energy
 - [ ] Kuhn's incommensurability
+```
+
+```viz bayes
+> Bayesian epistemology in one picture: beliefs are probabilities, evidence updates them, and base rates matter enormously.
 ```
 
 ```reflect

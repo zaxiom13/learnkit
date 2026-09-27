@@ -12,6 +12,19 @@ section: Acting
 | **Contractualism** | what no one could reasonably reject | Rawls, Scanlon | who's in the contract? (animals, future people) |
 | **Care ethics** | attending to relationships and care | Gilligan, Noddings | partiality |
 
+<figure class="diagram">
+<svg viewBox="0 0 640 200">
+<path d="M20 120 H300 L600 60" stroke="var(--text-2)" stroke-width="4" fill="none"/>
+<path d="M300 120 L600 170" stroke="var(--text-2)" stroke-width="4" fill="none"/>
+<g><rect x="0" y="100" width="54" height="34" rx="6" fill="var(--coral)"><animateTransform attributeName="transform" type="translate" values="0 0;230 0;230 0" keyTimes="0;0.6;1" dur="4s" repeatCount="indefinite"/></rect></g>
+<text x="560" y="45" font-size="22">🧍</text><text x="560" y="194" font-size="22">🧍🧍🧍🧍🧍</text>
+<rect x="286" y="136" width="28" height="30" rx="4" fill="var(--warn)"/><text x="300" y="185" text-anchor="middle" font-size="11">lever</text>
+<text x="330" y="100" font-size="12">pull: 1 dies · don't: 5 die</text>
+<text x="20" y="30" font-size="11.5">Most people pull the lever. Most refuse to push a man off a bridge for the same 5-for-1 trade. Why the difference?</text>
+</svg>
+<figcaption>The trolley problem: consequentialist maths meets deontological intuition, and it's now an engineering spec for autonomous vehicles.</figcaption>
+</figure>
+
 ## Puzzles
 
 - **Trolley problem** (Foot, Thomson): pull the lever to kill one and save five? Push a man off a bridge to do it? Most say yes to the first, no to the second.
@@ -19,6 +32,10 @@ section: Acting
 - **Moral luck**, **is–ought gap** (Hume: you can't derive "ought" from "is").
 - **Effective altruism** (Singer, MacAskill): use evidence and reason to do the most good; **longtermism** — the future could hold vastly more people.
 - **AI alignment**: how to make powerful systems pursue what we actually value — ethics becomes engineering.
+
+```viz gametheory
+> Ethics meets evolution: why being nice (but not a pushover) wins repeated games.
+```
 
 ```choice
 ? Kant's categorical imperative says…

@@ -4,6 +4,17 @@ blurb: Social contracts, liberty, equality, markets — the arguments behind eve
 section: Acting
 ---
 
+<figure class="diagram">
+<svg viewBox="0 0 640 200">
+<line x1="40" y1="100" x2="600" y2="100" stroke="var(--line-strong)" stroke-width="2"/>
+<line x1="320" y1="20" x2="320" y2="180" stroke="var(--line-strong)" stroke-width="2"/>
+<text x="600" y="92" text-anchor="end" font-size="11.5">economic: markets →</text><text x="44" y="92" font-size="11.5">← state/collective</text>
+<text x="326" y="30" font-size="11.5">↑ authority</text><text x="326" y="178" font-size="11.5">↓ liberty</text>
+<g class="bob" style="animation-delay:0.0s"><circle cx="120" cy="50" r="7" fill="var(--bad)"/><text x="130" y="54" font-size="11.5">Marx (state phase)</text></g><g class="bob" style="animation-delay:0.3s"><circle cx="180" cy="150" r="7" fill="var(--warn)"/><text x="190" y="154" font-size="11.5">anarcho-communism</text></g><g class="bob" style="animation-delay:0.6s"><circle cx="250" cy="125" r="7" fill="var(--accent)"/><text x="260" y="129" font-size="11.5">Rawls</text></g><g class="bob" style="animation-delay:0.8999999999999999s"><circle cx="380" cy="130" r="7" fill="var(--good)"/><text x="390" y="134" font-size="11.5">Mill</text></g><g class="bob" style="animation-delay:1.2s"><circle cx="520" cy="165" r="7" fill="#7b43c9"/><text x="530" y="169" font-size="11.5">Nozick</text></g><g class="bob" style="animation-delay:1.5s"><circle cx="440" cy="60" r="7" fill="var(--text-2)"/><text x="450" y="64" font-size="11.5">Hobbes</text></g><g class="bob" style="animation-delay:1.7999999999999998s"><circle cx="500" cy="110" r="7" fill="#1c8f7a"/><text x="510" y="114" font-size="11.5">Hayek</text></g><g class="bob" style="animation-delay:2.1s"><circle cx="90" cy="110" r="7" fill="var(--coral)"/><text x="100" y="114" font-size="11.5">Rousseau</text></g>
+</svg>
+<figcaption>A crude two-axis map of political thought. Real positions resist two dimensions, but it's a useful first sketch.</figcaption>
+</figure>
+
 | thinker | idea |
 |---|---|
 | **Plato** | philosopher-kings; suspicion of democracy |
@@ -19,6 +30,10 @@ section: Acting
 | **Rawls** | **veil of ignorance**: choose principles not knowing your place → equal liberties + difference principle |
 | **Nozick** | libertarian reply: justice in holdings, minimal state |
 | **Arrow** | **impossibility theorem**: no voting system with ≥3 options satisfies all fairness criteria |
+
+```viz condorcet
+> Condorcet's paradox: three perfectly rational voter blocs can produce an irrational majority (A beats B, B beats C, C beats A).
+```
 
 ```choice
 ? Rawls' "veil of ignorance" asks you to…

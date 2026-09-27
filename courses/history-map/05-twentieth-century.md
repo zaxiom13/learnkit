@@ -28,7 +28,21 @@ section: The modern turn
 | **Rights** | universal suffrage, civil rights movement, UN Declaration of Human Rights (1948) |
 | **Globalisation** | container shipping, trade rounds, WTO, supply chains |
 
+```viz bars title="The quiet revolution"
+1900 | 32 | life expectancy at birth, world
+1950 | 46
+1970 | 56
+1990 | 64
+2000 | 67
+2019 | 73
+> Global life expectancy (years). Much of the jump comes from children no longer dying: vaccines, antibiotics, clean water, better nutrition.
+```
+
 The biggest human story may be quieter: global life expectancy rose from ~32 (1900) to ~70+ (2000), and extreme poverty fell from most of humanity to under 10%.
+
+```viz gametheory
+> The Cold War logic of deterrence and cooperation, as a game. In a one-shot game defection wins. Repeat it and reciprocity can emerge.
+```
 
 ```choice
 ? Why is the Cuban Missile Crisis studied in game theory?
