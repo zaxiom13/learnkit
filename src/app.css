@@ -327,3 +327,93 @@ pre {
     font-size: 16px;
   }
 }
+
+.small {
+  font-size: 12.5px;
+}
+
+/* Hand-drawn diagrams embedded in lessons: <figure class="diagram"><svg>…</svg><figcaption>…</figcaption></figure> */
+.diagram {
+  margin: 20px 0;
+  padding: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+.diagram svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+.diagram svg text {
+  fill: var(--text);
+  font-family: var(--font-ui);
+}
+.diagram figcaption {
+  margin-top: 8px;
+  font-size: 13.5px;
+  color: var(--text-2);
+}
+.diagram .flow {
+  stroke-dasharray: 6 6;
+  animation: dg-flow 0.9s linear infinite;
+}
+.diagram .pulse {
+  animation: dg-pulse 2.2s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.diagram .spin {
+  animation: dg-spin 10s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.diagram .bob {
+  animation: dg-bob 3s ease-in-out infinite;
+}
+.diagram .blink {
+  animation: dg-blink 1.6s steps(2) infinite;
+}
+.diagram .draw {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: dg-draw 3s var(--ease) forwards;
+}
+@keyframes dg-flow {
+  to {
+    stroke-dashoffset: -12;
+  }
+}
+@keyframes dg-pulse {
+  50% {
+    transform: scale(1.12);
+    opacity: 0.75;
+  }
+}
+@keyframes dg-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dg-bob {
+  50% {
+    transform: translateY(-6px);
+  }
+}
+@keyframes dg-blink {
+  50% {
+    opacity: 0.2;
+  }
+}
+@keyframes dg-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .diagram * {
+    animation: none !important;
+  }
+}

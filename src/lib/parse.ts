@@ -11,6 +11,7 @@
 //   ```reveal Label   hidden content behind a button
 //   ```reflect     "explain it back": free text + a self-check rubric
 //   ```order       put the lines in the right order
+//   ```viz name key=value ...   an interactive visualisation (see VIZ below); body lines are data, "> " lines a caption
 import { marked, type Token, type Tokens } from "marked";
 
 export type Block =
@@ -21,7 +22,18 @@ export type Block =
   | { kind: "steps"; id: string; title: string; steps: string[] }
   | { kind: "reveal"; id: string; label: string; html: string }
   | { kind: "reflect"; id: string; prompt: string; rubric: string[]; model: string }
-  | { kind: "order"; id: string; prompt: string; items: string[]; explain: string };
+  | { kind: "order"; id: string; prompt: string; items: string[]; explain: string }
+  | { kind: "viz"; id: string; name: string; opts: Record<string, string>; lines: string[]; caption: string };
+
+/** Every visualisation the app knows how to draw (src/ui/viz/). */
+export const VIZ = [
+  "timeline", "bars", "stack", "syscall", "cgroup", "jitter", "ringbuffer", "latency", "bigo", "softmax",
+  "attention", "pathintegral", "bell", "ising", "lorenz", "brownian", "bayes", "orderbook", "option", "kelly",
+  "matrix", "harmonics", "colorwheel", "perspective", "evolution", "neuron", "codon", "quorum", "avalanche",
+  "condorcet", "diagonal", "montecarlo", "gradient", "pipes", "pagecache", "numa", "falsesharing", "spacetime",
+  "orbit", "bands", "logistic", "tree", "lightcone", "waves", "boids", "sort", "hashring", "lsm", "backtest",
+  "compound", "population", "gametheory", "fourier", "tiling", "spectrum",
+] as const;
 
 export interface Lesson {
   id: string;
@@ -134,11 +146,19 @@ function parseBlock(lang: string, body: string, id: string, where: string): Bloc
       if (items.length < 3) throw new FormatError(`${where}: an order block needs at least three numbered lines, in the correct order.`);
       return { kind, id, prompt: md(s.prompt), items, explain: md(s.explain) };
     }
+    case "viz": {
+      const name = args[0] ?? "";
+      if (!(VIZ as readonly string[]).includes(name)) throw new FormatError(`${where}: unknown visualisation "${name}".`);
+      const opts: Record<string, string> = {};
+      for (const m of args.slice(1).join(" ").matchAll(/(\w+)=(?:"([^"]*)"|(\S+))/g)) opts[m[1]] = m[2] ?? m[3];
+      const lines = s.rest.map((l) => l.trim()).filter(Boolean);
+      return { kind, id, name, opts, lines, caption: md(s.explain) };
+    }
   }
   throw new FormatError(`${where}: unknown block type "${kind}".`);
 }
 
-const BLOCKS = new Set(["choice", "answer", "cards", "steps", "reveal", "reflect", "order"]);
+const BLOCKS = new Set(["choice", "answer", "cards", "steps", "reveal", "reflect", "order", "viz"]);
 
 export function parseLesson(course: string, file: string, src: string, n: number): Lesson {
   const [meta, body] = frontMatter(src.replace(/\r/g, ""));

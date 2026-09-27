@@ -16,6 +16,21 @@ section: Foundations
 > Roughly 1964 → 1969 → 1973 → early 1980s → 1983 → 1991 → 2008.
 ```
 
+```viz timeline
+1964 | Multics begins | 1964 | MIT, GE and Bell Labs' ambitious time-sharing OS
+1969 | Unix born | 1969 | Thompson writes it on a spare PDP-7 at Bell Labs
+1973 | Unix rewritten in C | 1973 | portable: move the OS by recompiling
+1977 | BSD | 1977 | Berkeley's Unix — later TCP/IP, vi, sockets
+1983 | GNU project | 1983 | Stallman: a free Unix-like system
+1988 | POSIX | 1988 | the standard for "Unix-like"
+1991 | Linux 0.01 | 1991 | Torvalds: "just a hobby, won't be big and professional"
+2001 | Mac OS X | 2001 | BSD heritage goes mainstream on desktops
+2005 | git | 2005 | Torvalds writes it in about two weeks for kernel development
+2008 | Android | 2008 | Linux in billions of pockets
+2017 | 100% of TOP500 | 2017 | every one of the world's top 500 supercomputers runs Linux
+> Press play.
+```
+
 ## The people and ideas
 
 | who / what | contribution |
@@ -28,6 +43,26 @@ section: Foundations
 | **POSIX** | the standard that says what "Unix-like" means |
 
 Today: macOS is certified UNIX (BSD heritage via Darwin); Linux runs essentially all top supercomputers, most cloud servers, Android, and nearly every exchange matching engine.
+
+```viz tree
+. Unix (Bell Labs, 1969) | the ancestor
+.. Research Unix | Bell Labs editions V1–V10
+.. BSD (Berkeley) | networking, vi, sockets
+... FreeBSD | servers, Netflix CDN, PlayStation OS base
+... NetBSD / OpenBSD | portability / security (OpenSSH!)
+... Darwin → macOS, iOS | Apple's kernel is BSD + Mach
+.. System V (AT&T) | the commercial line
+... Solaris | Sun — ZFS, DTrace
+... AIX, HP-UX | IBM and HP servers
+. Unix-like, no Unix code | clean-room reimplementations
+.. MINIX | Tanenbaum's teaching OS; inspired Linus
+.. GNU/Linux | GNU userland + Linux kernel
+... Debian → Ubuntu | community / Canonical
+... Red Hat → RHEL, Fedora | enterprise
+... Android | Linux kernel, not GNU
+... Alpine, Arch… | hundreds of distributions
+> The family tree. Tap to expand.
+```
 
 ## Philosophy
 

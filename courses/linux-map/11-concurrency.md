@@ -16,6 +16,23 @@ section: Low latency
 | **Lock-free / wait-free structures** | complex, no blocking | hot paths |
 | **Shared-memory IPC** (`mmap`, `/dev/shm`) | processes share RAM directly | fastest cross-process messaging |
 
+<figure class="diagram">
+<svg viewBox="0 0 640 180">
+<g font-size="12">
+<text x="160" y="18" text-anchor="middle" font-weight="700">thread A (producer)</text>
+<text x="480" y="18" text-anchor="middle" font-weight="700">thread B (consumer)</text>
+<rect x="60" y="30" width="200" height="30" rx="7" fill="var(--surface-3)"/><text x="160" y="50" text-anchor="middle" font-family="var(--font-code)">data = 42</text>
+<rect x="60" y="72" width="200" height="30" rx="7" fill="var(--accent)"/><text x="160" y="92" text-anchor="middle" font-family="var(--font-code)" style="fill:#fff">ready.store(true, release)</text>
+<rect x="380" y="72" width="200" height="30" rx="7" fill="var(--good)"/><text x="480" y="92" text-anchor="middle" font-family="var(--font-code)" style="fill:#fff">while(!ready.load(acquire))</text>
+<rect x="380" y="114" width="200" height="30" rx="7" fill="var(--surface-3)"/><text x="480" y="134" text-anchor="middle" font-family="var(--font-code)">use(data) → 42 ✓</text>
+<path d="M260 87 H380" stroke="var(--coral)" stroke-width="3" class="flow"/>
+<text x="320" y="80" text-anchor="middle" font-size="10.5" style="fill:var(--coral)">synchronises-with</text>
+<path d="M160 60 V72" stroke="var(--text-3)" stroke-width="2"/><path d="M480 102 V114" stroke="var(--text-3)" stroke-width="2"/>
+<text x="320" y="170" text-anchor="middle" font-size="11" opacity="0.8">without release/acquire, B could see ready=true but a stale data (and on ARM, it sometimes does)</text>
+</g></svg>
+<figcaption>Release/acquire is the handshake that makes lock-free publishing safe.</figcaption>
+</figure>
+
 ## Memory ordering — the physics-y bit
 
 CPUs and compilers **reorder** memory operations for speed. On one core you never notice; across cores another thread can see writes "out of order". Languages give you **memory orders**: `relaxed`, `acquire`, `release`, `seq_cst` (C++/Rust). x86 is fairly strong (TSO); ARM is weaker, so bugs appear when code moves to ARM.
@@ -23,6 +40,10 @@ CPUs and compilers **reorder** memory operations for speed. On one core you neve
 ## The single-producer single-consumer ring buffer
 
 The classic HFT structure (see the **LMAX Disruptor**): a fixed array, a write index owned by the producer, a read index owned by the consumer. No locks — each index has one writer. Pad indices onto separate **cache lines (64 bytes)** to avoid **false sharing**.
+
+```viz ringbuffer
+> Make the producer faster than the consumer and watch it fill up. Something has to give: drop, block, or apply backpressure.
+```
 
 ```choice
 ? Two threads on different cores increment different counters that sit in the same 64-byte cache line. What happens?
@@ -39,6 +60,10 @@ The classic HFT structure (see the **LMAX Disruptor**): a fixed array, a write i
 - [ ] Priority inversion
 - [ ] Livelock
 > Priority inversion is a *low*-priority holder blocking a high-priority waiter — it famously hit the Mars Pathfinder rover in 1997.
+```
+
+```viz falsesharing
+> Two cores, two separate counters, one shared cache line. Every write steals the line from the other core. Pad them apart and throughput jumps.
 ```
 
 ```answer

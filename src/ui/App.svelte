@@ -8,6 +8,7 @@
   import Steps from "./Steps.svelte";
   import Reflect from "./Reflect.svelte";
   import Order from "./Order.svelte";
+  import Viz from "./viz/Viz.svelte";
 
   const files = import.meta.glob("../../courses/*/*.md", { query: "?raw", import: "default", eager: true }) as Record<string, string>;
   const courses: Course[] = buildCourses(files);
@@ -83,6 +84,7 @@
           {:else if b.kind === "steps"}<Steps {b} />
           {:else if b.kind === "reflect"}<Reflect {b} />
           {:else if b.kind === "order"}<Order {b} />
+          {:else if b.kind === "viz"}<Viz {b} />
           {:else if b.kind === "reveal"}
             <details class="card reveal"><summary>{b.label}</summary><div class="prose">{@html b.html}</div></details>
           {/if}

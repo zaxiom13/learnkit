@@ -37,6 +37,32 @@ And the glue: **pipes** (`|`) connect small tools into a pipeline; **redirects**
 > Sockets are file descriptors, so both socket tools and open-file tools can answer.
 ```
 
+```viz tree
+. Text processing | slice and transform streams of text
+.. grep | find lines matching a pattern
+.. sed | stream edit: substitute, delete
+.. awk | column-aware mini-language
+.. sort / uniq | order and count
+.. jq | the same, for JSON
+. Inspection | what's running and what is it doing?
+.. ps / top / htop | process lists
+.. lsof | open files and sockets
+.. strace | every system call
+.. perf / bpftrace | where time goes
+. Networking | sockets and packets
+.. ss | who's listening, who's connected
+.. ip | addresses, routes, links
+.. tcpdump | capture packets
+.. curl | talk HTTP
+. Services | long-running daemons
+.. systemctl | start, stop, enable
+.. journalctl | read their logs
+. Remote | working on servers
+.. ssh / scp | secure shell and copy
+.. tmux | sessions that survive disconnects
+> Know the families. The exact flags are the AI's job.
+```
+
 ```steps Directing an AI with the right words
 Goal: "Find the 10 IPs hitting our server most in today's nginx log."
 ---
@@ -45,6 +71,16 @@ Class: text processing pipeline.
 Words to use: "grep today's lines, extract the IP column, sort, count unique, sort by count, top 10".
 ---
 The AI writes something like `awk '{print $1}' access.log | sort | uniq -c | sort -rn | head`. You didn't need the syntax — you needed the *shape*.
+```
+
+```viz pipes
+cat access.log | 10.0.0.7 - - [27/Sep] "GET /" 200; 10.0.0.9 - - [27/Sep] "GET /a" 200; 10.0.0.7 - - [27/Sep] "GET /b" 404; 10.0.0.3 - - [27/Sep] "GET /" 200; 10.0.0.7 - - [27/Sep] "GET /c" 200; 10.0.0.9 - - [27/Sep] "GET /" 200
+awk '{print $1}' | 10.0.0.7; 10.0.0.9; 10.0.0.7; 10.0.0.3; 10.0.0.7; 10.0.0.9
+sort | 10.0.0.3; 10.0.0.7; 10.0.0.7; 10.0.0.7; 10.0.0.9; 10.0.0.9
+uniq -c | 1 10.0.0.3; 3 10.0.0.7; 2 10.0.0.9
+sort -rn | 3 10.0.0.7; 2 10.0.0.9; 1 10.0.0.3
+head -10 | 3 10.0.0.7; 2 10.0.0.9; 1 10.0.0.3
+> Add one stage at a time and watch the data change shape. That's the Unix philosophy: small tools, joined by pipes.
 ```
 
 ```answer

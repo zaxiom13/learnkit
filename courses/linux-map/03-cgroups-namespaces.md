@@ -11,6 +11,37 @@ A Docker/Kubernetes container is **not** a virtual machine. It's an ordinary Lin
 | **cgroups** (control groups) | how much it can **use** | CPU, memory, I/O, number of processes |
 | **namespaces** | what it can **see** | its own PIDs, network, hostname, mounts, users |
 
+<figure class="diagram">
+<svg viewBox="0 0 640 220">
+<rect x="10" y="10" width="620" height="200" rx="16" fill="var(--surface-2)" stroke="var(--line-strong)"/>
+<text x="24" y="32" font-size="12" opacity="0.7">one Linux kernel, shared by everyone</text>
+<g>
+<rect x="30" y="48" width="280" height="148" rx="14" fill="color-mix(in srgb, var(--accent) 10%, transparent)" stroke="var(--accent)" stroke-width="2"/>
+<text x="44" y="70" font-size="13" font-weight="700">container A</text>
+<rect x="46" y="82" width="120" height="100" rx="10" fill="none" stroke="var(--good)" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="106" y="100" text-anchor="middle" font-size="11" style="fill:var(--good)">namespaces</text>
+<text x="106" y="120" text-anchor="middle" font-size="10.5">own PIDs · own net</text><text x="106" y="136" text-anchor="middle" font-size="10.5">own mounts · hostname</text>
+<text x="106" y="166" text-anchor="middle" font-size="18" class="pulse">👁</text>
+<rect x="178" y="82" width="120" height="100" rx="10" fill="none" stroke="var(--coral)" stroke-width="2"/>
+<text x="238" y="100" text-anchor="middle" font-size="11" style="fill:var(--coral)">cgroup</text>
+<text x="238" y="120" text-anchor="middle" font-size="10.5">≤ 0.5 CPU</text><text x="238" y="136" text-anchor="middle" font-size="10.5">≤ 1 GB RAM</text>
+<rect x="198" y="150" width="80" height="12" rx="6" fill="var(--surface-3)"/><rect x="198" y="150" width="40" height="12" rx="6" fill="var(--coral)" class="blink"/>
+</g>
+<g>
+<rect x="330" y="48" width="280" height="148" rx="14" fill="color-mix(in srgb, var(--warn) 10%, transparent)" stroke="var(--warn)" stroke-width="2"/>
+<text x="344" y="70" font-size="13" font-weight="700">container B</text>
+<rect x="346" y="82" width="120" height="100" rx="10" fill="none" stroke="var(--good)" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="406" y="100" text-anchor="middle" font-size="11" style="fill:var(--good)">namespaces</text>
+<text x="406" y="126" text-anchor="middle" font-size="10.5">sees only itself</text>
+<text x="406" y="166" text-anchor="middle" font-size="18" class="pulse">👁</text>
+<rect x="478" y="82" width="120" height="100" rx="10" fill="none" stroke="var(--coral)" stroke-width="2"/>
+<text x="538" y="100" text-anchor="middle" font-size="11" style="fill:var(--coral)">cgroup</text>
+<text x="538" y="120" text-anchor="middle" font-size="10.5">cores 2–5 only</text><text x="538" y="136" text-anchor="middle" font-size="10.5">pids.max 100</text>
+</g>
+</svg>
+<figcaption>A container = namespaces (what it can <b>see</b>) + cgroups (what it can <b>use</b>) + an image, all on one shared kernel.</figcaption>
+</figure>
+
 ## The cgroup "API" is a filesystem
 
 Modern Linux uses **cgroup v2**, a single tree mounted at `/sys/fs/cgroup`. A cgroup is a **directory**. Settings are **files** in it. You operate it with `mkdir`, `echo` and `cat`.
@@ -27,6 +58,10 @@ Modern Linux uses **cgroup v2**, a single tree mounted at `/sys/fs/cgroup`. A cg
 | `io.max` | disk bandwidth/IOPS limits per device |
 | `pids.max` | cap on processes (stops fork bombs) |
 | `memory.current`, `cpu.stat`, `memory.events` | read-only stats |
+
+```viz cgroup
+> Set a quota below what the job wants and it runs in bursts, then waits. That's throttling. Start the leak and watch <code>memory.current</code> climb into <code>memory.max</code>.
+```
 
 ```steps Put a job on half a CPU and 1 GB of RAM
 Think in files, not tools.
@@ -66,6 +101,21 @@ tolerance: 0.001
 
 - **`cpuset.cpus`** pins the trading engine to dedicated cores and keeps everything else *off* them.
 - **CPU throttling from `cpu.max` is poison for latency** — a thread can be paused for the rest of a 100 ms period. Latency-critical services usually get *no* CPU quota and dedicated cores instead.
+
+```viz tree
+. /sys/fs/cgroup | the root of the single v2 hierarchy
+.. cgroup.subtree_control | "+cpu +memory +io" — controllers handed to children
+.. system.slice | systemd's services
+... sshd.service | each service is its own cgroup
+... nginx.service | with cpu.max, memory.max …
+.. user.slice | logged-in users' sessions
+.. trading.slice | your own group (mkdir!)
+... md-handler | cpuset.cpus = 2, no quota
+... strategy | cpuset.cpus = 3
+... logger | cpu.weight = 50, memory.max = 2G
+.. kubepods.slice | Kubernetes pods live here
+> It's a directory tree. systemd, Docker and Kubernetes all just make directories and write files in here.
+```
 
 ## Namespaces — what a process can see
 

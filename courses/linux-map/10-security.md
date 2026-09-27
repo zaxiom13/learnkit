@@ -26,6 +26,17 @@ Trading boxes often grant a process just `CAP_SYS_NICE` (real-time priority) and
 > Capabilities slice root's powers so you can hand out only one.
 ```
 
+```viz stack packet=exploit
+Memory-safe language / careful code | stop the bug existing (Rust, bounds checks, sanitisers)
+ASLR, stack canaries, NX | make exploitation unreliable
+Unprivileged user | a compromise doesn't give root
+Capabilities | only CAP_SYS_NICE + CAP_IPC_LOCK, not all of root
+seccomp filter | even with code execution, dangerous syscalls fail
+SELinux / AppArmor | policy says which files and ports it may touch
+Namespaces + cgroups | it can't see or starve anything else
+> Defence in depth: an attacker has to punch through every layer. Send one in and see how far it gets.
+```
+
 ## Classes of attack (know the names)
 
 | class | idea |
@@ -36,6 +47,17 @@ Trading boxes often grant a process just `CAP_SYS_NICE` (real-time priority) and
 | **Supply chain** | a compromised dependency or build step (xz-utils backdoor, 2024) |
 | **Side channels** | leak secrets via timing/cache (**Spectre, Meltdown**, 2018) |
 | **Container escape** | break out of namespaces via kernel bug or over-privilege |
+
+```viz timeline
+1988 | Morris worm | 1988 | first internet worm; a buffer overflow in fingerd
+1996 | "Smashing the Stack for Fun and Profit" | 1996 | the classic buffer-overflow tutorial
+2014 | Heartbleed | 2014 | OpenSSL read past a buffer and leaked server memory
+2014.5 | Shellshock | 2014 | bash executed code hidden in environment variables
+2018 | Spectre & Meltdown | 2018 | speculative execution leaks secrets across boundaries
+2021 | Log4Shell | Dec 2021 | a logging library fetched and ran remote code
+2024 | xz-utils backdoor | 2024 | years-long supply-chain infiltration, caught by a latency anomaly
+> Famous security failures. Each one is a class of attack from the table.
+```
 
 ```answer
 ? Which Linux feature filters which system calls a process is allowed to make?

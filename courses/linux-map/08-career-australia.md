@@ -13,6 +13,25 @@ section: Career
 | **SRE / platform engineer** | keep systems up at scale | Linux internals, containers (cgroups), observability, incident response |
 | **DevOps / cloud engineer** | CI/CD, Kubernetes, infrastructure as code | containers, networking basics, scripting |
 
+```viz tree
+. Low-latency developer | C++/Rust hot paths
+.. market-data handlers | decode exchange feeds fast
+.. order gateways | FIX/binary order entry
+.. strategy engines | quoting and hedging logic
+. Trading infrastructure | the machines and networks
+.. kernel & NIC tuning | isolcpus, IRQs, huge pages
+.. time sync | PTP, hardware timestamps
+.. networks | co-lo, multicast, switches
+. SRE / platform | keep it running
+.. containers & orchestration | cgroups, Kubernetes
+.. observability | metrics, tracing, alerts
+.. incident response | on-call, postmortems
+. Quant developer / researcher | the maths side
+.. data pipelines | tick data, kdb+/q, Python
+.. research tooling | backtesting, simulation
+> Where the Linux knowledge from this course plugs in.
+```
+
 ## The Australian landscape (check current listings)
 
 - **Sydney** is the hub for trading: market makers and proprietary trading firms such as **Optiver**, **IMC**, **Akuna Capital** and **Susquehanna (SIG)** have offices there, and hire graduates and experienced engineers.
