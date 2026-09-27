@@ -22,6 +22,10 @@ If you can build a portfolio that pays the same as the option in every scenario,
 
 Change variables x = ln S and it becomes the **heat equation**. (Nobel 1997 to Scholes and Merton; Black had died.)
 
+```viz option
+> A Black–Scholes pricer. The blue curve is today's value, the dashed hockey stick is the payoff at expiry, and the red tangent is delta. Slide time to zero and watch the curve collapse onto the payoff.
+```
+
 ## The Greeks
 
 | Greek | sensitivity to |
@@ -33,6 +37,14 @@ Change variables x = ln S and it becomes the **heat equation**. (Nobel 1997 to S
 | **Rho** | interest rates |
 
 **Implied volatility**: invert Black–Scholes from market prices. Plotted against strike it's not flat — the **volatility smile/skew** — the market's admission that returns are fat-tailed and crashes happen.
+
+<figure class="diagram">
+<svg viewBox="0 0 640 190">
+<g><rect x="20" y="30" width="140" height="120" rx="12" fill="var(--surface-2)"/><text x="90" y="22" text-anchor="middle" font-size="12" font-weight="700">long call</text><polyline points="10,60 70,60 130,0" transform="translate(20 30)" fill="none" stroke="var(--good)" stroke-width="3"/><line x1="20" x2="160" y1="90" y2="90" stroke="var(--line-strong)" stroke-dasharray="3 3"/></g><g><rect x="175" y="30" width="140" height="120" rx="12" fill="var(--surface-2)"/><text x="245" y="22" text-anchor="middle" font-size="12" font-weight="700">long put</text><polyline points="10,0 70,60 130,60" transform="translate(175 30)" fill="none" stroke="var(--coral)" stroke-width="3"/><line x1="175" x2="315" y1="90" y2="90" stroke="var(--line-strong)" stroke-dasharray="3 3"/></g><g><rect x="330" y="30" width="140" height="120" rx="12" fill="var(--surface-2)"/><text x="400" y="22" text-anchor="middle" font-size="12" font-weight="700">short call</text><polyline points="10,60 70,60 130,120" transform="translate(330 30)" fill="none" stroke="var(--bad)" stroke-width="3"/><line x1="330" x2="470" y1="90" y2="90" stroke="var(--line-strong)" stroke-dasharray="3 3"/></g><g><rect x="485" y="30" width="140" height="120" rx="12" fill="var(--surface-2)"/><text x="555" y="22" text-anchor="middle" font-size="12" font-weight="700">straddle</text><polyline points="10,0 70,60 130,0" transform="translate(485 30)" fill="none" stroke="var(--accent)" stroke-width="3"/><line x1="485" x2="625" y1="90" y2="90" stroke="var(--line-strong)" stroke-dasharray="3 3"/></g>
+<text x="320" y="178" text-anchor="middle" font-size="11.5">payoff at expiry vs stock price (the dashed line is zero profit before premium)</text>
+</svg>
+<figcaption>The four shapes every options interview starts from. A straddle is a pure bet on volatility: you win if the price moves a lot either way.</figcaption>
+</figure>
 
 ```answer
 ? A call has delta 0.5. The stock rises $2. Approximately how much does the option price change, in dollars?

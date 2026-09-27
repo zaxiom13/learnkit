@@ -19,6 +19,10 @@ Buyers post **bids**, sellers post **asks** (offers). The highest bid and lowest
 | **Clearing house (CCP)** | becomes buyer to every seller and seller to every buyer; removes counterparty risk |
 | **Regulator** | in Australia: **ASIC** (markets), **APRA** (banks/super), RBA (central bank) |
 
+```viz orderbook
+> A live (simulated) limit order book. Send market orders of different sizes and watch them walk the book: bigger orders pay more slippage.
+```
+
 ## Market-making economics
 
 Earn half the spread on each side; lose to **adverse selection** (trading with someone who knows more — the price moves against you right after). A good market maker's edge = spread captured − adverse selection − costs, over millions of trades.
@@ -36,6 +40,23 @@ tolerance: 0.0001
 - [ ] Slippage
 > The market maker widens spreads or skews quotes when flow looks "toxic".
 ```
+
+<figure class="diagram">
+<svg viewBox="0 0 640 200">
+<g font-size="12">
+<rect x="250" y="70" width="140" height="60" rx="12" fill="var(--accent)"/><text x="320" y="96" text-anchor="middle" style="fill:#fff" font-weight="700">Exchange</text><text x="320" y="114" text-anchor="middle" style="fill:#fff" font-size="10.5">matching engine</text>
+<rect x="10" y="20" width="150" height="40" rx="10" fill="var(--good)"/><text x="85" y="45" text-anchor="middle" style="fill:#fff">market maker (quotes)</text>
+<rect x="10" y="140" width="150" height="40" rx="10" fill="var(--warn)"/><text x="85" y="165" text-anchor="middle" style="fill:#fff">investor via broker</text>
+<rect x="480" y="20" width="150" height="40" rx="10" fill="#7b43c9"/><text x="555" y="45" text-anchor="middle" style="fill:#fff">clearing house (CCP)</text>
+<rect x="480" y="140" width="150" height="40" rx="10" fill="var(--coral)"/><text x="555" y="165" text-anchor="middle" style="fill:#fff">market data → everyone</text>
+<path d="M160 40 C210 40 220 85 250 90" stroke="var(--good)" stroke-width="2.5" fill="none" class="flow"/>
+<path d="M160 160 C210 160 220 115 250 110" stroke="var(--warn)" stroke-width="2.5" fill="none" class="flow"/>
+<path d="M390 90 C430 80 440 40 480 40" stroke="#7b43c9" stroke-width="2.5" fill="none" class="flow"/>
+<path d="M390 110 C430 120 440 160 480 160" stroke="var(--coral)" stroke-width="2.5" fill="none" class="flow"/>
+<text x="195" y="30" font-size="10">limit orders</text><text x="195" y="186" font-size="10">market order</text><text x="420" y="30" font-size="10">trade to settle</text><text x="410" y="186" font-size="10">prices, trades</text>
+</g></svg>
+<figcaption>Who talks to whom. The matching engine is the heart; the CCP guarantees the trade settles even if one side goes bust.</figcaption>
+</figure>
 
 ```steps A market order walking the book
 Asks: 100 @ 10.00, 200 @ 10.01, 500 @ 10.02. You market-buy 250.

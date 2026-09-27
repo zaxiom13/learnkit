@@ -18,6 +18,22 @@ section: History
 > 1637 → 1720 → 1929 → 1971 → 1987 → 2000 → 2008 → 2010 → 2020.
 ```
 
+```viz timeline
+1637 | Tulip mania | 1637 | bulb contracts at the price of houses
+1720 | South Sea Bubble | 1720 | Newton: "I can calculate the motions of heavenly bodies, but not the madness of people"
+1929 | Wall Street Crash | Oct 1929 | Dow −89% peak to trough by 1932
+1971 | Nixon closes the gold window | Aug 1971 | fiat money era begins
+1987 | Black Monday | 19 Oct 1987 | Dow −22.6% in one day
+1998 | LTCM | 1998 | leverage ~25:1+, Fed-brokered rescue
+2000 | Dot-com bust | 2000–02 | Nasdaq −78%
+2008 | Lehman / GFC | Sep 2008 | global banking crisis
+2010 | Flash Crash | 6 May 2010 | ~1 trillion dollars vanishes and returns in minutes
+2012 | Knight Capital | Aug 2012 | ~$440M lost in 45 minutes to a bad deploy
+2020 | COVID crash | Mar 2020 | fastest bear market ever, fastest recovery
+2022 | FTX collapses | Nov 2022 | customer funds gone
+> Play through four centuries of manias and panics.
+```
+
 | episode | lesson |
 |---|---|
 | **1929** | leverage (margin), bank runs → deposit insurance, SEC |
@@ -34,6 +50,10 @@ section: History
 - **Minsky's financial instability hypothesis**: stability breeds risk-taking breeds instability.
 - **Reflexivity** (Soros): beliefs move prices which move fundamentals.
 - **Money** as a social technology: commodity money → gold standard → **fiat** → central bank digital money; central banks steer via the **interest rate** (the RBA's cash rate in Australia).
+
+```viz population
+> Boom–bust cycles aren't only in markets. Predator–prey dynamics show the same overshoot-and-crash feedback. Minsky's instability has an ecological cousin.
+```
 
 ```choice
 ? What single bug-free-looking event does Knight Capital teach every trading engineer?

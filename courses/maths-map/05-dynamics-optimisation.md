@@ -8,6 +8,10 @@ section: Workhorses
 
 Deterministic but unpredictable: tiny differences grow exponentially (positive **Lyapunov exponent**). **Lorenz (1963)**: a toy weather model → the butterfly effect and strange attractors. Other names: **logistic map** and its period-doubling route to chaos (**Feigenbaum constant** δ ≈ 4.669, universal), **fractals** (Mandelbrot set), **KAM theorem** (which orbits survive perturbation), **ergodicity** (time average = ensemble average — and why it fails for wealth: see *ergodicity economics*).
 
+```viz lorenz
+> The butterfly effect. Two runs of Lorenz's weather model start a millionth apart, then go their separate ways on the same attractor.
+```
+
 ## Optimisation
 
 | class | property | tools |
@@ -18,6 +22,10 @@ Deterministic but unpredictable: tiny differences grow exponentially (positive *
 | **Constrained** | limits on variables | Lagrange multipliers, KKT conditions |
 | **Dynamic programming** | optimal substructure | Bellman equation — control, RL, option exercise |
 
+```viz logistic
+> The logistic map: period doubling → chaos. Drag r and watch the orbit split.
+```
+
 ## Numerical methods — names to use
 
 - ODEs: **Euler** (simple, unstable), **Runge–Kutta 4**, **symplectic integrators** (conserve energy long-term — orbits, molecular dynamics).
@@ -25,6 +33,10 @@ Deterministic but unpredictable: tiny differences grow exponentially (positive *
 - Linear systems: LU, **conjugate gradient**, multigrid.
 - Randomness: **Monte Carlo** (error ∝ 1/√N regardless of dimension), quasi-Monte Carlo.
 - Always ask: **stability, convergence, conditioning, floating-point error** (IEEE 754 double ≈ 16 decimal digits).
+
+```viz montecarlo
+> Monte Carlo: random darts estimate π. The error falls like 1/√N, visible as a −½ slope on the log–log plot.
+```
 
 ```choice
 ? You simulate a planet's orbit for a million years and energy slowly drifts. What to ask the AI for?
@@ -43,6 +55,10 @@ Deterministic but unpredictable: tiny differences grow exponentially (positive *
 - [x] Every local minimum is the global minimum, so simple methods find the true optimum // Mean–variance portfolio optimisation is convex.
 - [ ] Convex problems have no solution
 - [ ] Convex functions can't be differentiated
+```
+
+```viz gradient
+> Non-convex optimisation: two basins. A convex problem would have just one, and any downhill method would find it.
 ```
 
 ```reflect

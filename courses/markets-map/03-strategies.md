@@ -16,6 +16,10 @@ section: Trading
 | **Event-driven / merger arb** | earnings, takeovers | days–months |
 | **Alternative data / ML** | satellite, text, card data | varies |
 
+```viz brownian geometric=1
+> What a strategy's P&amp;L looks like with zero edge: a random walk. Some paths look amazing by chance.
+```
+
 ## The honest truths
 
 - **Alpha decays** as others find it; capacity is limited.
@@ -28,6 +32,10 @@ section: Trading
 = 1.6
 tolerance: 0.05
 > (0.1/1) × √252 ≈ 0.1 × 15.87 ≈ 1.59.
+```
+
+```viz backtest
+> The multiple-testing trap, live. Try more strategies and the best one's in-sample Sharpe climbs, while its out-of-sample Sharpe stays around zero.
 ```
 
 ```choice
