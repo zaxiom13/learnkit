@@ -11,4 +11,4 @@ npm test         # validates every course
 npm run build    # static site in dist/
 ```
 
-Write your own courses: see [AUTHORING.md](AUTHORING.md). Included: *System Design Interviews* and *Probability, Intuitively*.
+Write your own courses: see [AUTHORING.md](AUTHORING.md). Included: *System Design Interviews*, *Probability, Intuitively*, and the "Map" series — awareness-first tours of Linux & Unix, Computing, Physics, Mathematics, Markets & Quant Finance, History, Philosophy, Art & Music, and Life & Mind.
