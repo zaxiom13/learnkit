@@ -10,6 +10,22 @@ section: Foundations
 - **Halting problem**: no program can decide, for every program and input, whether it halts. Proof by diagonalisation — the same trick as Cantor and Gödel.
 - **Rice's theorem**: every non-trivial question about what a program *does* is undecidable. (That's why perfect bug-finders can't exist.)
 
+<figure class="diagram">
+<svg viewBox="0 0 640 230">
+<ellipse cx="320" cy="120" rx="300" ry="105" fill="color-mix(in srgb, var(--warn) 10%, transparent)" stroke="var(--warn)" stroke-width="2"/>
+<ellipse cx="290" cy="130" rx="220" ry="80" fill="color-mix(in srgb, var(--coral) 10%, transparent)" stroke="var(--coral)" stroke-width="2"/>
+<ellipse cx="230" cy="140" rx="120" ry="55" fill="color-mix(in srgb, var(--good) 14%, transparent)" stroke="var(--good)" stroke-width="2"/>
+<ellipse cx="420" cy="115" rx="70" ry="38" fill="color-mix(in srgb, #7b43c9 18%, transparent)" stroke="#7b43c9" stroke-width="2" stroke-dasharray="5 4" class="pulse"/>
+<g font-size="12.5">
+<text x="560" y="40" font-weight="700">PSPACE</text><text x="560" y="56" font-size="10.5">chess, Go (generalised)</text>
+<text x="440" y="70" font-weight="700">NP</text>
+<text x="200" y="130" font-weight="700">P</text><text x="170" y="150" font-size="10.5">sorting, shortest path,</text><text x="170" y="165" font-size="10.5">linear programming, primality</text>
+<text x="420" y="110" text-anchor="middle" font-weight="700">NP-complete</text><text x="420" y="126" text-anchor="middle" font-size="10.5">SAT, TSP, sudoku, knapsack</text>
+<text x="330" y="200" font-size="10.5">factoring: in NP, probably not NP-complete; in BQP (quantum-easy)</text>
+</g></svg>
+<figcaption>The standard picture, assuming P ≠ NP (nobody has proved it). If any NP-complete problem fell to a fast algorithm, the purple and green regions would merge.</figcaption>
+</figure>
+
 ## Complexity
 
 | class | informally |
@@ -34,11 +50,19 @@ section: Foundations
 | n² | naive pairwise | 10¹² — hours |
 | 2ⁿ | brute-force subsets | never |
 
+```viz bigo
+> Feel the difference. At n = 60, 2ⁿ is about 10¹⁸ steps: centuries on a modern CPU.
+```
+
 ## Physics of computation
 
 - **Shannon entropy** H = −Σ p log₂ p bits: the limit of lossless compression.
 - **Landauer's principle**: erasing one bit costs at least kT ln 2 of energy — information is physical.
 - **Reversible computing** and **quantum computing** both grow from this.
+
+```viz sort
+> Same data, two algorithms. Merge sort does about n log₂ n ≈ 200 comparisons for 40 items. Bubble sort needs about n²/2 ≈ 800.
+```
 
 ```answer
 ? Binary search over 1,000,000 sorted items needs about how many comparisons? (nearest whole number)

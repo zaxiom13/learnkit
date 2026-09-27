@@ -17,17 +17,45 @@ section: Data
 | **Time-series** | append-only by time | **kdb+/q**, TimescaleDB, InfluxDB | tick data, metrics |
 | **Vector** | embeddings | pgvector, FAISS, Pinecone | semantic search for AI |
 
+<figure class="diagram">
+<svg viewBox="0 0 640 200">
+<g font-size="12" font-family="var(--font-code)">
+<rect x="270" y="10" width="100" height="32" rx="8" fill="var(--accent)"/><text x="320" y="31" text-anchor="middle" style="fill:#fff">40 | 80</text>
+<path d="M285 42 L110 80 M320 42 L320 80 M355 42 L530 80" stroke="var(--line-strong)" stroke-width="2"/>
+<rect x="50" y="80" width="120" height="32" rx="8" fill="var(--good)"/><text x="110" y="101" text-anchor="middle" style="fill:#fff">10 | 25</text>
+<rect x="260" y="80" width="120" height="32" rx="8" fill="var(--good)"/><text x="320" y="101" text-anchor="middle" style="fill:#fff">52 | 67</text>
+<rect x="470" y="80" width="120" height="32" rx="8" fill="var(--good)"/><text x="530" y="101" text-anchor="middle" style="fill:#fff">91 | 120</text>
+<rect x="12" y="150" width="62" height="28" rx="6" fill="var(--surface-3)"/><text x="43" y="169" text-anchor="middle" font-size="11">3,7</text><rect x="82" y="150" width="62" height="28" rx="6" fill="var(--surface-3)"/><text x="113" y="169" text-anchor="middle" font-size="11">12,19</text><rect x="152" y="150" width="62" height="28" rx="6" fill="var(--surface-3)"/><text x="183" y="169" text-anchor="middle" font-size="11">30,33</text><rect x="222" y="150" width="62" height="28" rx="6" fill="var(--surface-3)"/><text x="253" y="169" text-anchor="middle" font-size="11">45,50</text><rect x="292" y="150" width="62" height="28" rx="6" fill="var(--surface-3)"/><text x="323" y="169" text-anchor="middle" font-size="11">55,60</text><rect x="362" y="150" width="62" height="28" rx="6" fill="var(--surface-3)"/><text x="393" y="169" text-anchor="middle" font-size="11">70,77</text><rect x="432" y="150" width="62" height="28" rx="6" fill="var(--surface-3)"/><text x="463" y="169" text-anchor="middle" font-size="11">85,88</text><rect x="502" y="150" width="62" height="28" rx="6" fill="var(--surface-3)"/><text x="533" y="169" text-anchor="middle" font-size="11">95,99</text><rect x="572" y="150" width="62" height="28" rx="6" fill="var(--surface-3)"/><text x="603" y="169" text-anchor="middle" font-size="11">130</text>
+<path d="M320 42 L320 80 M335 112 L373 150" stroke="var(--coral)" stroke-width="3" class="flow" fill="none"/>
+<circle r="6" fill="var(--coral)"><animateMotion dur="2.2s" repeatCount="indefinite" path="M320 26 L320 96 L390 164"/></circle>
+<text x="620" y="130" text-anchor="end" font-family="var(--font-ui)" font-size="11">find 60: 3 hops, not a scan</text>
+</g></svg>
+<figcaption>A B-tree index: each node splits the key range, so finding one row in a billion takes a handful of page reads.</figcaption>
+</figure>
+
 ## Under the hood
 
 - **B-tree** indexes: balanced trees; great for reads and ranges (Postgres, most SQL).
 - **LSM-tree**: buffer writes in memory, flush sorted files, merge later; great for write-heavy loads (RocksDB, Cassandra).
 - **Row vs column storage**: rows for "fetch one order", columns for "average price over a year".
 
+```viz lsm
+> The other design: an LSM tree buffers writes in RAM and flushes sorted files, trading read work for blazing sequential writes.
+```
+
 ## Transactions: ACID
 
 **Atomic** (all or nothing), **Consistent** (rules hold), **Isolated** (concurrent transactions don't see each other's half-work), **Durable** (committed = survives a crash; that's the WAL + fsync from the Linux course).
 
 Isolation levels trade safety for speed: *read committed* → *repeatable read* → *serializable*. Anomalies to name: **dirty read**, **non-repeatable read**, **phantom**, **write skew**.
+
+```viz bars unit=% log=1 title="Why analytics loves columns"
+Row store: read every column of every row | 100 | 1 billion ticks × 10 columns × 8 bytes ≈ 80 GB touched
+Column store: read 2 columns | 20 | only time + price ≈ 16 GB
+Column store + compression | 4 | similar prices compress ~4–5× ≈ 3–4 GB
+Column store + compression + time partition pruning | 0.4 | skip years you didn't ask for
+> Illustrative: relative data read (as % of the row-store cost) for "average price per day over 10 years".
+```
 
 ```choice
 ? You need the average trade price per stock per day over 10 years of ticks. Which storage layout wins?

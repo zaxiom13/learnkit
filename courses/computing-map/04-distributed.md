@@ -8,6 +8,22 @@ section: Data
 
 The network is **not** reliable, latency is **not** zero, bandwidth is **not** infinite, and **there is no global clock**. Every distributed design is a response to these.
 
+<figure class="diagram">
+<svg viewBox="0 0 640 210">
+<g font-size="13">
+<polygon points="320,20 120,190 520,190" fill="none" stroke="var(--line-strong)" stroke-width="2"/>
+<circle cx="320" cy="20" r="30" fill="var(--accent)"/><text x="320" y="25" text-anchor="middle" style="fill:#fff" font-weight="700">C</text>
+<circle cx="120" cy="190" r="30" fill="var(--good)"/><text x="120" y="195" text-anchor="middle" style="fill:#fff" font-weight="700">A</text>
+<circle cx="520" cy="190" r="30" fill="var(--coral)" class="pulse"/><text x="520" y="195" text-anchor="middle" style="fill:#fff" font-weight="700">P</text>
+<text x="360" y="30" font-size="11.5">consistency: every read sees the latest write</text>
+<text x="160" y="178" font-size="11.5">availability: every request answered</text>
+<text x="480" y="150" font-size="11.5" text-anchor="end">partitions happen (not optional)</text>
+<text x="200" y="100" font-size="11.5" text-anchor="middle" style="fill:var(--good)">AP: Cassandra, DNS</text>
+<text x="450" y="100" font-size="11.5" text-anchor="middle" style="fill:var(--accent)">CP: etcd, ZooKeeper, banks</text>
+</g></svg>
+<figcaption>Since partitions will happen, the real choice is C vs A while one is in progress.</figcaption>
+</figure>
+
 ## Key ideas
 
 | idea | one line |
@@ -25,12 +41,20 @@ The network is **not** reliable, latency is **not** zero, bandwidth is **not** i
 
 Real systems: **etcd/ZooKeeper** (consensus for config/locks — Kubernetes stores its state in etcd), **Kafka** (replicated log), **Spanner** (uses atomic clocks + GPS, "TrueTime", for global consistency), **CRDTs** (data types that merge without conflicts — collaborative editors).
 
+```viz quorum
+> Crash nodes and find the point where writes stop. Raft and Paxos refuse to act without a majority, because two minorities could otherwise both think they're in charge (split brain).
+```
+
 ```choice
 ? A bank balance service during a network split. What does CAP force?
 - [x] Refuse some requests (stay consistent) or accept them (stay available) and risk divergence // Banks usually pick C.
 - [ ] Nothing, if the servers are fast enough
 - [ ] It must lose data
 > Partitions happen; the choice is what you do during one.
+```
+
+```viz hashring
+> Partitioning in action. Add and remove servers and count how many keys have to move.
 ```
 
 ```answer
