@@ -22,6 +22,15 @@ Here's the shape we'll use for every problem:
 > Clarify first — designing the wrong system perfectly still fails. Then numbers, then the big picture, then depth.
 ```
 
+```viz stack packet=question
+Clarify | who uses it, what must it do, how big, how fast?
+Estimate | QPS, storage, bandwidth, with orders of magnitude
+High-level sketch | clients → LB → services → data stores
+Deep-dive | the hardest part: data model, hot keys, consistency
+Trade-offs & failure | what breaks, and what you'd do about it
+> The interview framework as a stack. Walk a question down through it.
+```
+
 ## Clarify: functional and non-functional
 
 **Functional requirements** are what the system *does*: "users can post a photo", "followers see new photos in a feed".

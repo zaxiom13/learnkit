@@ -34,6 +34,10 @@ hint: First find uploads per day, then divide by 100,000.
 > 10,000,000 × 2 = 20,000,000 uploads a day. 20,000,000 ÷ 100,000 = 200 per second.
 ```
 
+```viz latency
+> Know these orders of magnitude and every estimate gets easier.
+```
+
 ## Storage
 
 ```steps Photo storage

@@ -17,11 +17,33 @@ section: Machinery
 | **Punctuated equilibrium** | long stasis, rapid bursts (Gould & Eldredge) |
 | **Evo-devo** | how small changes in developmental genes produce big body changes |
 
+```viz evolution
+> Cumulative selection vs blind chance. Dawkins' weasel program, live.
+```
+
 ## Evolution as an algorithm
 
 It's a population-based stochastic optimiser — the inspiration for **genetic algorithms** and evolution strategies. It doesn't aim; it climbs fitness landscapes locally and can get stuck (the eye's blind spot, the recurrent laryngeal nerve looping round the aorta — in giraffes, metres long).
 
 **Australia**: long isolation → marsupials and monotremes (the platypus lays eggs), eucalypts; a natural experiment in evolution.
+
+```viz tree
+. LUCA | last universal common ancestor, ~4 billion years ago
+.. Bacteria | most of life's chemistry
+.. Archaea | extremophiles, and our nuclear ancestors
+... Eukaryotes | cells with a nucleus (after swallowing a bacterium → mitochondria)
+.... Plants | photosynthesis via captured cyanobacteria (chloroplasts)
+.... Fungi | closer to animals than plants!
+.... Animals | multicellular movers
+..... Vertebrates | backbones
+...... Fish → tetrapods | onto land ~375 million years ago
+....... Mammals | milk, fur
+........ Monotremes | platypus, echidna — lay eggs
+........ Marsupials | kangaroo, koala — pouches; Australia's radiation
+........ Placentals | us
+......... Primates → Homo sapiens | ~300,000 years ago
+> The tree of life, from one ancestor to you. Tap to climb it.
+```
 
 ```choice
 ? Hamilton's rule rB > C explains…
@@ -33,6 +55,10 @@ It's a population-based stochastic optimiser — the inspiration for **genetic a
 ```answer
 ? Under Hamilton's rule, a full sibling has relatedness r = 0.5. If helping costs you C = 1, what benefit B to your sibling makes it exactly break-even?
 = 2
+```
+
+```viz population
+> Ecology is evolution's arena: populations of predators and prey drive each other in cycles.
 ```
 
 ```reflect

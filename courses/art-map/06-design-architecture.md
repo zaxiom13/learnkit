@@ -17,12 +17,40 @@ section: Making
 
 **Sydney Opera House** (Jørn Utzon, opened 1973; UNESCO World Heritage 2007): its shells were only buildable once the team worked out they could all be cut from a single sphere — an early triumph of geometry and computing in architecture.
 
+<figure class="diagram">
+<svg viewBox="0 0 640 220">
+<g transform="translate(20 20)" fill="none" stroke="var(--accent)" stroke-width="2.5">
+<path d="M0 180 V70 A60 60 0 0 1 120 70 V180" class="draw"/><text x="60" y="200" text-anchor="middle" font-size="11" stroke="none" style="fill:var(--text)">Roman round arch</text>
+</g>
+<g transform="translate(180 20)" fill="none" stroke="var(--coral)" stroke-width="2.5">
+<path d="M0 180 V80 Q0 10 60 0 Q120 10 120 80 V180" class="draw"/><path d="M130 180 L170 60 M150 120 L120 110" stroke="var(--coral)" class="draw"/><text x="75" y="200" text-anchor="middle" font-size="11" stroke="none" style="fill:var(--text)">Gothic pointed arch + flying buttress</text>
+</g>
+<g transform="translate(390 40)"><path d="M0 140 C40 20 100 -10 120 40 C140 -10 200 10 230 140Z" fill="color-mix(in srgb, var(--good) 20%, transparent)" stroke="var(--good)" stroke-width="2.5" class="draw"/><path d="M40 140 C80 50 120 30 140 70" fill="none" stroke="var(--good)" stroke-width="2"/><text x="115" y="180" text-anchor="middle" font-size="11">Utzon's shells: pieces of one sphere</text></g>
+</svg>
+<figcaption>Structure drives style. Pointed arches push thrust downward, buttresses carry it outside, and the walls can become glass. The Opera House's sails are all cut from a single sphere, so their panels could be mass-produced.</figcaption>
+</figure>
+
 ## Design principles (graphic, product, UI)
 
 - **Hierarchy**, **contrast**, **alignment**, **repetition**, **proximity** (the CRAP principles).
 - **Typography**: serif vs sans-serif; Swiss/International style (Helvetica, grids).
 - **Dieter Rams' "good design"**: innovative, useful, aesthetic, understandable, unobtrusive, honest, long-lasting, thorough, environmentally friendly, as little design as possible.
 - **UX**: affordances (Don Norman), Fitts' law (bigger, closer targets are faster to hit), Hick's law (more choices, slower decisions).
+
+```viz timeline
+-447 | Parthenon | 447–432 BCE | Doric order, optical refinements
+126 | Pantheon | ~126 CE | unreinforced concrete dome, still the largest of its kind
+537 | Hagia Sophia | 537 | a dome that seems to float on light
+1163 | Notre-Dame de Paris | 1163 → | Gothic ribs and buttresses
+1436 | Florence Duomo | 1436 | Brunelleschi's double-shell dome
+1889 | Eiffel Tower | 1889 | iron as architecture
+1929 | Barcelona Pavilion | 1929 | Mies: "less is more"
+1931 | Empire State Building | 1931 |
+1973 | Sydney Opera House | 1973 | Utzon; UNESCO World Heritage 2007
+1997 | Guggenheim Bilbao | 1997 | Gehry; computer-designed curves
+2010 | Burj Khalifa | 2010 | 828 m
+> Buildings that changed what buildings could be.
+```
 
 ```choice
 ? How were the Sydney Opera House's shell geometries made buildable?

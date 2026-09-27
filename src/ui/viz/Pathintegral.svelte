@@ -8,7 +8,7 @@
     const r = rng(5);
     const out: number[][] = [];
     for (let p = 0; p < P; p++) {
-      const amp = (p / P) * 1.4;
+      const amp = (p / P) * 0.9;
       const ys = Array.from({ length: K + 1 }, (_, k) => (k === 0 || k === K ? 0 : 0));
       for (let m = 1; m <= 3; m++) { const c = gauss(r) * amp / m; for (let k = 0; k <= K; k++) ys[k] += c * Math.sin((m * Math.PI * k) / K); }
       out.push(ys);

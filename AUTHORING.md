@@ -108,6 +108,39 @@ Anything in Markdown.
 ```
 ````
 
+### `viz` — an interactive visualisation
+
+````markdown
+```viz name key=value title="Optional title"
+data lines (for data-driven visualisations)
+> Caption shown under it (Markdown allowed).
+```
+````
+
+The widgets live in `src/ui/viz/` (one Svelte file each; the list of valid names is `VIZ` in `src/lib/parse.ts`).
+
+- **Data-driven** (reusable anywhere):
+  - `timeline`: lines `value | label | shown date | detail`. `log=1` means values are "years ago", on a log scale. Has play and quiz modes.
+  - `bars`: lines `label | value | note`, with options `log=1`, `unit=`, `sort=1`.
+  - `stack`: lines `layer | what it does`, top to bottom. `packet="read()"` animates a request down and back up.
+  - `tree`: lines `. Name | note`; the number of leading dots is the depth.
+  - `pipes`: lines `command | sample;output;lines`.
+  - `softmax`: lines `label | score`, with option `t=`.
+- **Simulations**: `syscall cgroup jitter ringbuffer latency numa falsesharing pagecache lsm quorum hashring avalanche sort bigo gradient attention pathintegral bell ising waves spacetime lightcone orbit bands spectrum lorenz logistic brownian bayes matrix diagonal montecarlo fourier orderbook option kelly backtest compound evolution neuron codon population boids harmonics colorwheel perspective tiling condorcet gametheory`.
+
+### Hand-drawn diagrams
+
+Inline SVG works in lesson Markdown. Wrap it in a figure with **no blank lines inside**:
+
+```html
+<figure class="diagram">
+<svg viewBox="0 0 640 200"> … </svg>
+<figcaption>What to notice.</figcaption>
+</figure>
+```
+
+Use theme colours (`var(--accent)`, `var(--coral)`, `var(--good)`, `var(--warn)`, `var(--text)`, `var(--surface-2)`, `var(--line-strong)`) so diagrams work in light and dark mode. Animation classes: `flow` (marching dashes along a path), `pulse`, `spin`, `bob`, `blink`, `draw` (the line draws itself). SMIL (`<animateMotion>`) also works. All motion stops for people who prefer reduced motion.
+
 ## The teaching style (Khan-style follow-along)
 
 1. **One idea per lesson**, 5–10 minutes. Title it with the idea.
@@ -115,7 +148,8 @@ Anything in Markdown.
 3. **Worked examples before questions.** Use `steps` to show the full reasoning once, then ask a similar question with `answer`.
 4. **Questions that teach.** Wrong options should be tempting mistakes, with a `//` note explaining why.
 5. **Explain it back** at least once per lesson (`reflect`) — retrieval beats rereading.
-6. **End with `cards`** for the 3–6 facts worth remembering.
-7. For **interview prep**: include realistic prompts, a framework, and model answers spoken the way a strong candidate would.
+6. **Show, don't just tell.** Aim for at least two visuals per lesson: a `viz` to play with, plus a diagram or data chart.
+7. **End with `cards`** for the 3–6 facts worth remembering.
+8. For **interview prep**: include realistic prompts, a framework, and model answers spoken the way a strong candidate would.
 
 Run `npm test` — it checks every course parses and every accepted answer is actually accepted.

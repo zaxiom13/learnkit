@@ -54,7 +54,7 @@ tolerance: 0.01
 
 ```choice
 ? Put–call parity: for European options, C − P equals…
-- [x] S − K·e^{−rT} // Stock minus discounted strike.
+- [x] S − K·e^(−rT) // Stock minus discounted strike.
 - [ ] 0
 - [ ] K − S
 > Violations are arbitrage: exactly the kind of thing market makers trade away instantly.

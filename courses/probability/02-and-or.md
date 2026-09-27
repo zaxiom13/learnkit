@@ -40,6 +40,17 @@ hint: What's the chance of no heads at all?
 > No heads means tails three times: (½)³ = ⅛. So at least one head = 1 − ⅛ = ⅞.
 ```
 
+```viz bars unit=% title="At least one six"
+1 roll | 16.7
+2 rolls | 30.6
+3 rolls | 42.1
+4 rolls | 51.8 | de Méré's bet: just better than even
+6 rolls | 66.5
+10 rolls | 83.8
+20 rolls | 97.4
+> P(at least one six) = 1 − (5/6)ⁿ, in %. The complement trick makes it easy.
+```
+
 ## "Or" for events that can't both happen: add
 
 If two events are **mutually exclusive**, P(A or B) = P(A) + P(B).
@@ -51,6 +62,10 @@ If two events are **mutually exclusive**, P(A or B) = P(A) + P(B).
 - [ ] 16/52
 - [ ] 1/2
 > The events can't happen together, so add: 4/52 + 4/52 = 8/52 = 2/13.
+```
+
+```viz bayes
+> Where "and" and "or" meet: P(sick and positive) vs P(positive). Conditional probability is just a ratio of areas.
 ```
 
 ```reflect

@@ -7,7 +7,7 @@ section: Many bodies
 ## The core
 
 - Microstates vs macrostates. **Boltzmann entropy** S = k_B ln Ω.
-- **Gibbs/canonical ensemble**: p_i = e^{−βE_i}/Z, β = 1/k_BT. The **partition function** Z generates everything: F = −k_BT ln Z.
+- **Gibbs/canonical ensemble**: p_i = e^(−βE_i)/Z, β = 1/k_BT. The **partition function** Z generates everything: F = −k_BT ln Z.
 - **Second law**: entropy of an isolated system doesn't decrease — statistically overwhelming, not absolute.
 - **Fluctuation–dissipation**: the way a system jiggles at equilibrium tells you how it responds to a push.
 
@@ -53,7 +53,7 @@ Near a critical point, correlation length diverges; microscopic details wash out
 ? A two-level system has energies 0 and ε, with ε = k_BT. What is p(ε)/p(0), to 2 decimal places?
 = 0.37
 tolerance: 0.01
-> e^{−1} ≈ 0.368.
+> e^(−1) ≈ 0.368.
 ```
 
 ```choice
@@ -80,8 +80,8 @@ model: The second law says systems drift to macrostates with vastly more microst
 
 ```cards
 S = k ln Ω :: Boltzmann's entropy.
-Partition function :: Z = Σ e^{−βE}; generates thermodynamics.
+Partition function :: Z = Σ e^(−βE); generates thermodynamics.
 Landauer :: Erasing a bit costs ≥ kT ln 2.
 Renormalisation group :: How physics changes with scale; explains universality.
 Bekenstein–Hawking :: Black hole entropy ∝ area.
-Metropolis algorithm :: Monte Carlo sampling from e^{−βE}.
+Metropolis algorithm :: Monte Carlo sampling from e^(−βE).

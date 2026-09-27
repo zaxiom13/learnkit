@@ -25,12 +25,20 @@ hint: Winning: +£148 with probability 1/100. Losing: −£2 with probability 99
 > (1/100 × 148) + (99/100 × −2) = 1.48 − 1.98 = −£0.50.
 ```
 
+```viz kelly
+> Expected value isn't the whole story. A bet with positive EV can still ruin you if you stake too much of your bankroll each time.
+```
+
 ```choice
 ? A game has positive expected value. Which statement is true?
 - [ ] You'll definitely win money the next time you play
 - [x] Over many plays, you'd expect to come out ahead on average // It's a long-run average.
 - [ ] You can't lose any single game
 > Expected value describes the long run. Any single play can still go against you.
+```
+
+```viz montecarlo
+> The law of large numbers, live: averages of random samples converge on the true value, with error ∝ 1/√N.
 ```
 
 ```cards

@@ -24,6 +24,13 @@ hint: 100,000,000 ÷ 2,500,000.
 > About 40 writes a second — and at 100× reads, about 4,000 redirects a second.
 ```
 
+```viz bars log=1 title="Code space"
+6 characters | 56800000000 | 62⁶ ≈ 56.8 billion codes
+7 characters | 3520000000000 | 62⁷ ≈ 3.5 trillion
+8 characters | 218000000000000 | 62⁸ ≈ 218 trillion
+> How many distinct base-62 codes each length gives (log scale).
+```
+
 ## 3. Sketch
 
 Client → load balancer → app servers → a key-value store mapping `code → long URL`, with a cache in front for hot links.
@@ -52,6 +59,10 @@ We create 100 million a month ≈ 1.2 billion a year, so 6 characters lasts abou
 - [x] Give each server its own range of numeric ids (from a counter service) and encode them in base 62 // Unique by construction.
 - [ ] Generate random codes and never check
 > Allocating ID ranges per server makes codes unique by construction, with no coordination on every request.
+```
+
+```viz hashring
+> Scaling the key–value store behind the shortener: spread codes across shards.
 ```
 
 ```reflect
