@@ -17,9 +17,47 @@ section: Large scales
 | **Turbulence** | Navier–Stokes existence and smoothness — a Millennium Prize problem |
 | **Room-temperature superconductivity** | many false alarms (e.g. LK-99, 2023) |
 
+```viz bars log=1 unit=" m" title="The scale of everything"
+Planck length | 1.6e-35
+Proton | 1e-15
+Hydrogen atom | 1e-10
+Virus | 1e-7
+Human hair | 1e-4
+Human | 1.7
+Earth | 1.3e7
+Sun–Earth distance | 1.5e11
+Light-year | 9.5e15
+Milky Way | 1e21
+Observable universe | 8.8e26
+> Sizes in metres, log scale: 62 orders of magnitude from the Planck length to the edge of the observable universe. We're roughly in the middle, logarithmically.
+```
+
 ## Where physicists go in industry
 
 Quant finance (stochastic calculus, Monte Carlo, statistics), ML research, quantum computing companies, semiconductors, climate modelling, data science. The transferable skills: **modelling, approximation, dimensional analysis, orders of magnitude, and knowing when a model is wrong.**
+
+```viz tree
+. Quantum gravity | GR + QM at the Planck scale
+.. String theory | extra dimensions, AdS/CFT, the landscape
+.. Loop quantum gravity | quantised spacetime geometry
+.. Asymptotic safety / causal sets | other routes
+. Dark sector | 95% of the universe
+.. Dark matter | WIMPs? axions? primordial black holes?
+.. Dark energy | Λ, or evolving (DESI hints)?
+.. Hubble tension | 67 vs 73 km/s/Mpc
+. Particle puzzles | beyond the Standard Model
+.. Neutrino masses | Dirac or Majorana?
+.. Matter–antimatter | where did the antimatter go?
+.. Hierarchy problem | why is the Higgs so light?
+. Foundations | what the theory means
+.. Measurement problem | collapse, many worlds, or…?
+.. Arrow of time | why was the past so low-entropy?
+. Emergent & applied | hard problems at human scale
+.. Turbulence | Navier–Stokes Millennium Prize
+.. High-T꜀ superconductivity | cuprate mechanism
+.. Fault-tolerant quantum computing | engineering frontier
+> The map of what we don't know.
+```
 
 ```choice
 ? What does AdS/CFT (holography) claim?

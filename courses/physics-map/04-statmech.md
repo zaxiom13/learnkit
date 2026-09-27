@@ -11,6 +11,16 @@ section: Many bodies
 - **Second law**: entropy of an isolated system doesn't decrease — statistically overwhelming, not absolute.
 - **Fluctuation–dissipation**: the way a system jiggles at equilibrium tells you how it responds to a push.
 
+```viz softmax title="Boltzmann distribution" t=1
+ground state E=0 | 0
+E = 1 | -1
+E = 2 | -2
+E = 3 | -3
+E = 4 | -4
+E = 5 | -5
+> A ladder of energy levels with Boltzmann weights e^(−E/kT). Cold: everything sits in the ground state. Hot: the levels even out. It's the same maths as an LLM's temperature knob.
+```
+
 ## Information is physical
 
 | idea | statement |
@@ -20,9 +30,17 @@ section: Many bodies
 | **Jaynes' maximum entropy** | stat mech is inference: the least-biased distribution given constraints |
 | **Bekenstein–Hawking** | black hole entropy S = k_B A / 4ℓ_P² — proportional to *area*, not volume → holography |
 
+```viz ising
+> The Ising model: a phase transition you can watch. Cool below T꜀ ≈ 2.27 and magnetised domains appear. At T꜀ there are clusters of every size, which is scale invariance (what the renormalisation group explains).
+```
+
 ## Phase transitions and universality
 
 Near a critical point, correlation length diverges; microscopic details wash out. Very different systems (liquid–gas, ferromagnets) share **critical exponents** — **universality**, explained by **Wilson's renormalisation group** (Nobel 1982). RG = "zoom out and see which couplings matter". It's the deepest idea of 20th-century theoretical physics and it reappears in ML theory.
+
+```viz brownian
+> Einstein 1905 and Bachelier 1900: the same random walk describes pollen grains and stock prices.
+```
 
 ## Leaks into other fields
 

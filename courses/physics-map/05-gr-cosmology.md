@@ -10,11 +10,19 @@ section: Large scales
 
 Tests: Mercury's perihelion, light bending (1919), gravitational redshift, **GPS** (needs ~38 µs/day correction — without it errors grow ~10 km/day), black hole images (EHT 2019), **gravitational waves** (LIGO 2015, Nobel 2017).
 
+```viz spacetime
+> Special relativity's time dilation, live: γ = 1/√(1−v²/c²). Near c the moving clock almost stops.
+```
+
 ## Black holes
 
 - Schwarzschild radius r_s = 2GM/c² (~3 km per solar mass).
 - **Hawking radiation** (1974): black holes have temperature ∝ 1/M and evaporate.
 - **Information paradox**: does evaporation destroy information? The **Page curve** / "island" calculations (2019+) suggest information escapes — a live frontier.
+
+```viz lightcone
+> The causal structure of spacetime. Nothing, not even information, gets outside the light cone.
+```
 
 ## ΛCDM — the standard cosmology
 
@@ -28,10 +36,30 @@ Evidence: the **CMB** (380,000 years after the Big Bang), big-bang nucleosynthes
 
 **Cracks**: the **Hubble tension** (early-universe vs local measurements of H₀ disagree ~70 vs ~67 km/s/Mpc, beyond errors); hints from DESI (2024–25) that dark energy may evolve; what dark matter *is*.
 
+```viz bars unit=% title="What the universe is made of"
+Dark energy | 68 | drives accelerating expansion; a cosmological constant Λ?
+Dark matter | 27 | gravitates, doesn't shine; unknown particle?
+Ordinary matter | 5 | everything in the periodic table
+— of which stars | 0.5 | most ordinary matter is diffuse gas
+> Today's cosmic energy budget (%).
+```
+
 ```answer
 ? Schwarzschild radius is ~3 km per solar mass. Roughly what is it for a 10-solar-mass black hole, in km?
 = 30
 tolerance: 1
+```
+
+```viz timeline
+-13.8e9 | Big Bang | 13.8 billion years ago | (plus inflation in the first ~10⁻³² s)
+-13.79999e9 | Nucleosynthesis | first ~3 minutes | hydrogen, helium, a little lithium
+-13.7996e9 | CMB released | 380,000 years | atoms form; the universe turns transparent
+-13.6e9 | First stars | ~100–200 million years | cosmic dawn (JWST is finding early galaxies)
+-9.2e9 | Milky Way disk | ~10 billion years ago |
+-5e9 | Dark energy takes over | ~5 billion years ago | expansion starts accelerating
+-4.6e9 | Sun and Earth | 4.6 billion years ago |
+0 | Today | now | 13.8 billion years
+> Cosmic history (not to scale; the first few entries are crammed into the first half-million years).
 ```
 
 ```choice
