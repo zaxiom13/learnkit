@@ -70,6 +70,11 @@ Achaemenid Persia (500 BCE) | 5.5 | first multi-continental empire
 model: Plausible reasons: growing cities and trade created literate classes with leisure to think; political fragmentation (Greek city-states, China's Warring States, Indian kingdoms) set rival courts competing for advisers; and social upheaval pushed people to look for universal ethics beyond tribe and ritual.
 ```
 
+```recall The Axial Age
+? When it was, and what came out of it.
+The Axial Age ran from about 800 to 200 BCE, when philosophy and the world religions arose. Later, Baghdad's House of Wisdom translated and extended Greek science, and al-Khwarizmi gave us the words algebra and algorithm.
+```
+
 ```cards
 Axial Age :: ~800–200 BCE; philosophy and world religions arise.
 Silk Road :: Trade network linking China to the Mediterranean.

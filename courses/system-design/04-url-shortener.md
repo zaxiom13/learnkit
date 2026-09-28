@@ -73,3 +73,8 @@ We create 100 million a month ≈ 1.2 billion a year, so 6 characters lasts abou
 - mentions a trade-off or next step (e.g. analytics, expiry)
 model: We expect about 40 new links and 4,000 redirects a second, so reads dominate. Requests go through a load balancer to stateless app servers, which look up codes in a key-value store with a cache in front for popular links. Codes are 7-character base-62 encodings of numeric IDs, and each server takes ID ranges from a counter service so codes never collide. Next I'd discuss analytics on clicks, which I'd push onto a queue so redirects stay fast.
 ```
+
+```recall The pitch
+? Your one-paragraph summary of the URL shortener design.
+Reads dominate, so put a cache in front of a key-value store mapping code to URL. Codes are 7-character base-62 encodings of numeric IDs. Each server takes ID ranges from a counter service, so codes never collide.
+```

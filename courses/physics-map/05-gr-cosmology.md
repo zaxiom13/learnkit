@@ -84,6 +84,12 @@ tolerance: 1
 model: The expansion rate today can be inferred from the early universe (the CMB plus the ΛCDM model) or measured locally with Cepheids and supernovae. They disagree by more than their errors — about 67 vs 73 km/s/Mpc. Either there are hidden systematic errors or ΛCDM is missing something, like early dark energy or new particle physics.
 ```
 
+```recall Gravity is geometry
+? General relativity and the cosmos, in brief.
+Matter tells spacetime how to curve, and spacetime tells matter how to move. Gravity is locally indistinguishable from acceleration. The cosmic microwave background is light from 380,000 years after the Big Bang.
+> The first sentence is John Wheeler's famous summary of Einstein's equations.
+```
+
 ```cards
 Einstein equations :: Curvature = 8πG/c⁴ × stress-energy.
 Equivalence principle :: Gravity is locally indistinguishable from acceleration.

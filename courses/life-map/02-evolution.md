@@ -69,6 +69,11 @@ It's a population-based stochastic optimiser — the inspiration for **genetic a
 model: The recurrent laryngeal nerve loops down under the aorta and back up to the larynx. In our fish ancestors that route was direct; as necks lengthened, the nerve was dragged along with the heart. Evolution can only tweak what exists, so the detour remains — in giraffes it's several metres long.
 ```
 
+```recall Evolution as an algorithm
+? The mechanisms that change gene frequencies.
+Natural selection: heritable variants that reproduce more, spread. Genetic drift: random changes in frequency, strongest in small populations. Hamilton's rule: helping kin evolves when r times B is greater than C.
+```
+
 ```cards
 Natural selection :: Heritable variants that reproduce more spread.
 Genetic drift :: Random frequency change; strong in small populations.

@@ -67,6 +67,12 @@ You have about 45 minutes. It's fine — good, even — to say *"I'll focus on p
 model: With limited time you can't design everything, so agreeing the scope keeps you on the parts that matter. Saying it out loud also lets the interviewer redirect you early, before you've spent ten minutes on something they don't care about.
 ```
 
+```recall The four steps
+? The framework, and the two kinds of requirement.
+Clarify, estimate, sketch, deep-dive. Functional requirements are what the system does. Non-functional requirements are how well it does it: latency, availability, scale and consistency.
+> Say this opening out loud in the interview: it shows structure before you draw a single box.
+```
+
 ```cards
 Functional requirement :: What the system does — its features.
 Non-functional requirement :: How well it does it — latency, availability, scale, consistency.

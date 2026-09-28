@@ -97,6 +97,11 @@ Write the new content to `config.tmp`.
 > Names live in directories; everything else in the inode.
 ```
 
+```recall Durability
+? Inodes, links and how data really reaches the disk.
+An inode holds a file's metadata and block map; names point to it. A hard link is a second name for an inode; a symlink is a file holding a path. Writes land in the page cache first, and fsync forces them to stable storage.
+```
+
 ```cards
 Inode :: A file's metadata + block map; names point to it.
 Hard link vs symlink :: Second name for an inode vs a file holding a path.

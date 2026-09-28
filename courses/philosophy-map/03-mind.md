@@ -67,6 +67,11 @@ section: Mind
 model: For: by functionalist lights, understanding is doing the right things with information, and LLMs build rich internal representations that generalise and reason. Against: Searle-style arguments say symbol manipulation isn't meaning, and LLMs lack grounding in perception, action and experience. Much hinges on whether "understanding" is a functional capacity or requires consciousness.
 ```
 
+```recall The hard problem
+? The central puzzles of philosophy of mind.
+The hard problem asks why there is subjective experience at all. Functionalism defines the mind by what it does, not what it is made of. Searle's Chinese room argues that syntax is not semantics.
+```
+
 ```cards
 Hard problem :: Why is there subjective experience at all?
 Functionalism :: Mind defined by function, not substrate.

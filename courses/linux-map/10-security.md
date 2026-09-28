@@ -73,6 +73,11 @@ Namespaces + cgroups | it can't see or starve anything else
 model: Least privilege means a component gets only the rights it needs. For example, a market-data process runs as an unprivileged user with just CAP_SYS_NICE and CAP_IPC_LOCK, plus a seccomp filter — so if it's compromised, the attacker can't read other users' files or load kernel modules.
 ```
 
+```recall Who may do what
+? The layers of Linux access control.
+Discretionary access control lets the owner set permissions. Mandatory access control, like SELinux, enforces a policy the owner can't override. Capabilities split root's powers into pieces. ASLR randomises memory layout to foil exploits.
+```
+
 ```cards
 DAC :: Owner-controlled permissions (rwx, users, groups).
 MAC :: Policy-controlled (SELinux, AppArmor); owner can't override.

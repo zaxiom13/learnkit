@@ -61,6 +61,11 @@ A cache is a copy — and copies can go out of date. Common strategies:
 > When one database isn't enough: shard it. Consistent hashing keeps resharding cheap.
 ```
 
+```recall The building blocks
+? What each standard component is for.
+A load balancer spreads traffic across servers and removes a single point of failure. A cache is a fast in-memory copy of hot data that can go stale. A message queue buffers work and absorbs spikes. A CDN serves static content from near the user.
+```
+
 ```cards
 Load balancer :: Spreads traffic across servers; removes a single point of failure.
 Cache :: Fast in-memory copy of hot data. Watch out for staleness.

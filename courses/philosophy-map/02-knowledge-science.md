@@ -52,6 +52,11 @@ section: Knowing
 model: Popper says science should proceed by bold conjectures that we try hard to refute; a single clear failure should sink a theory. Kuhn, looking at history, says scientists mostly do "normal science" inside a paradigm and tolerate anomalies until they pile up and a revolution replaces the framework. Popper describes the ideal logic; Kuhn describes the social reality.
 ```
 
+```recall How science knows
+? Hume, Popper and Kuhn.
+Hume's problem of induction: there is no logical justification for generalising from the past to the future. Popper's answer: a theory is scientific if it is falsifiable. Kuhn: science advances through paradigm shifts.
+```
+
 ```cards
 Problem of induction :: Hume: no logical justification for generalising from past to future.
 Falsifiability :: Popper's criterion for science.

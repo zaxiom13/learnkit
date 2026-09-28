@@ -69,6 +69,11 @@ tolerance: 5
 model: ANNs borrowed the idea of simple units summing weighted inputs, learning by adjusting connection strengths, and hierarchical processing like the visual cortex (which inspired convolutional nets). But brains use spikes and local learning rules rather than obvious backprop, learn from far less data, and run on 20 W where large models need megawatts.
 ```
 
+```recall The brain in four lines
+? Signals, learning, memory and reward.
+An action potential is an all-or-nothing electrical spike. Neurons that fire together wire together. The hippocampus forms memories. Dopamine signals reward prediction error.
+```
+
 ```cards
 Action potential :: All-or-nothing electrical spike.
 Hebbian learning :: Fire together, wire together.

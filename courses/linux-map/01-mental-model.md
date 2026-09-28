@@ -111,6 +111,11 @@ Hardware | CPU, RAM, NVMe disk, network card
 model: A syscall is a hand-off from your program to the kernel. The CPU switches privilege mode, the kernel does work, then switches back — hundreds of nanoseconds to microseconds each time. When your edge is measured in microseconds, you design the hot path to avoid them.
 ```
 
+```recall The one mental model
+? User space, the kernel, and the doorway between them.
+Programs run in user space; the kernel owns the hardware. A system call is the doorway between them. Everything is a file, and a file descriptor is a small integer naming an open file, socket or pipe.
+```
+
 ```cards
 System call :: The doorway from user programs into the kernel (read, write, mmap, clone…).
 User vs kernel space :: Programs vs the privileged core that owns the hardware.

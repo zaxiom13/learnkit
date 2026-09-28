@@ -105,6 +105,11 @@ Static types are **proofs about programs** (the **Curry–Howard correspondence*
 model: For a quick script I'd ask for Python — huge libraries, fast to write, speed doesn't matter. For a latency-critical service I'd ask for Rust or C++: compiled to native code, no garbage-collector pauses, and control over memory layout. The trade-off is development speed versus runtime predictability.
 ```
 
+```recall Typing and memory
+? How languages check types and manage memory.
+Static typing checks types before the program runs; dynamic typing checks them while it runs. Rust's ownership lets the compiler track who owns memory, so there is no garbage collector and no use-after-free.
+```
+
 ```cards
 Static vs dynamic typing :: Types checked before running vs while running.
 Ownership (Rust) :: Compiler tracks who owns memory — no GC, no use-after-free.

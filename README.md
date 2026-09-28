@@ -2,7 +2,7 @@
 
 Khan-Academy-style follow-along learning for **any subject** — and for interview prep.
 
-Courses are just Markdown files with interactive blocks: multiple choice, typed answers (fractions, decimals and percentages all understood), worked examples revealed step by step, flashcards that repeat until you know them, ordering puzzles, and "explain it back" reflections with a self-check rubric. Points, streaks and progress stay on your device. Works offline as a PWA.
+Courses are just Markdown files with interactive blocks: multiple choice, typed answers (fractions, decimals and percentages all understood), worked examples revealed step by step, flashcards that repeat until you know them, ordering puzzles, "explain it back" reflections with a self-check rubric, and recall drills where you type a key passage from memory with fading first-letter hints. Points, streaks and progress stay on your device. Works offline as a PWA.
 
 ```bash
 npm install

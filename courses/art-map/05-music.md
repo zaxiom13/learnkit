@@ -72,6 +72,11 @@ tolerance: 0.0001
 model: Notes an octave apart (2:1) share every other harmonic of the lower note; a fifth (3:2) shares every third harmonic. Because so many overtones line up exactly, there are few pairs of close-but-different frequencies to beat against each other, so the combination sounds smooth. Complex ratios produce more near-misses and more roughness.
 ```
 
+```recall Ratios and cadences
+? The physics and theory facts every musician leans on.
+An octave is a 2 to 1 frequency ratio and a perfect fifth is about 3 to 2. Equal temperament splits the octave into twelve equal semitones. The strongest cadence is dominant to tonic, five to one.
+```
+
 ```cards
 Octave :: 2:1 frequency ratio.
 Perfect fifth :: ≈ 3:2.

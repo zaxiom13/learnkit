@@ -80,6 +80,11 @@ The **evidence hierarchy**: anecdote → case series → observational studies (
 model: In observational data, people who take a treatment differ from those who don't in countless ways — age, health, wealth — that also affect outcomes. Randomisation balances all of these on average, even unknown ones, and blinding removes expectation effects, so a difference in outcomes can be attributed to the treatment itself.
 ```
 
+```recall How we know a treatment works
+? Why trials are randomised, and how to read the result.
+A randomised controlled trial is the gold standard because randomising breaks confounding, where a hidden variable causes both the exposure and the outcome. The number needed to treat is one divided by the absolute risk reduction.
+```
+
 ```cards
 mRNA vaccine :: Delivers instructions to make an antigen.
 CRISPR-Cas9 :: Programmable gene editing.

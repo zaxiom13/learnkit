@@ -75,6 +75,11 @@ section: History
 model: Most crises share leverage built on a compelling story about a new asset or innovation, a long calm that makes risk look small (Minsky), and then a shock that forces leveraged holders to sell, which drops prices, which forces more selling. Liquidity vanishes precisely when everyone needs it.
 ```
 
+```recall Lessons from crashes
+? The ideas that history keeps teaching.
+The efficient market hypothesis says prices reflect available information. Minsky: stability breeds leverage, and leverage breeds collapse. Fiat money is money by decree, not backed by a commodity.
+```
+
 ```cards
 EMH :: Prices reflect available information; hard to beat.
 Minsky moment :: Stability breeds leverage, then collapse.

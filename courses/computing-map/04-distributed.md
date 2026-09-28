@@ -79,6 +79,12 @@ Real systems: **etcd/ZooKeeper** (consensus for config/locks — Kubernetes stor
 model: A sender can't know whether a message was processed if the acknowledgement is lost, so it must retry, which can duplicate. Systems deliver at-least-once and make processing idempotent — dedupe by message id, or commit output and offsets in one transaction — giving exactly-once *effects*.
 ```
 
+```recall The fallacies
+? The four facts every distributed design is a response to.
+The network is not reliable, latency is not zero, bandwidth is not infinite, and there is no global clock.
+> Retries, timeouts, idempotency and consensus all exist because of this one sentence.
+```
+
 ```cards
 CAP :: Under partition, pick consistency or availability.
 Raft / Paxos :: Consensus algorithms; need a majority.

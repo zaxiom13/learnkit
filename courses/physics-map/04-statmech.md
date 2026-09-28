@@ -78,6 +78,11 @@ tolerance: 0.01
 model: The second law says systems drift to macrostates with vastly more microstates, simply because those are overwhelmingly more probable. For 10²³ particles a decrease is so unlikely it never happens in practice; for tiny systems it does, and fluctuation theorems (Jarzynski, Crooks) give the exact odds.
 ```
 
+```recall Entropy
+? Boltzmann's formula and what information costs.
+Boltzmann: entropy equals k times the log of the number of microstates, S equals k ln Omega. The partition function generates all of thermodynamics. Landauer: erasing one bit costs at least kT ln 2 of energy.
+```
+
 ```cards
 S = k ln Ω :: Boltzmann's entropy.
 Partition function :: Z = Σ e^(−βE); generates thermodynamics.

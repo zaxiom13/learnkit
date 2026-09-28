@@ -80,6 +80,11 @@ The classic HFT structure (see the **LMAX Disruptor**): a fixed array, a write i
 model: Each index has exactly one writer — the producer owns head, the consumer owns tail — so no lock is needed. The producer writes the slot then publishes the new head with release ordering; the consumer reads head with acquire so it sees the slot's data. Put head and tail on separate cache lines to avoid false sharing, and decide what happens when the buffer is full.
 ```
 
+```recall The concurrency ladder
+? From locks down to lock-free.
+A futex only enters the kernel when there is contention. Compare-and-swap atomically sets a value only if it is still what you expected. Acquire and release ordering publish data safely between threads.
+```
+
 ```cards
 futex :: Fast userspace mutex: only enters the kernel on contention.
 CAS :: Compare-and-swap: atomic "set if still equal".

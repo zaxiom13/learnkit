@@ -64,6 +64,11 @@ The biggest human story may be quieter: global life expectancy rose from ~32 (19
 model: WWII's end in 1945 produced the institutions of the modern order — the UN, IMF, World Bank, and the US-led alliance system — plus nuclear deterrence, which arguably prevented another great-power war for decades while fuelling proxy wars around the world.
 ```
 
+```recall The twentieth century
+? The spine of the century in dates.
+World War One, 1914 to 1918. World War Two, 1939 to 1945. Bretton Woods set the postwar money system in 1944. Decolonisation ran from 1947 to the 1970s. The Berlin Wall fell in 1989.
+```
+
 ```cards
 WWI :: 1914–1918.
 WWII :: 1939–1945.

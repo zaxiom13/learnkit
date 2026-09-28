@@ -54,6 +54,11 @@ Random matrix theory (Marchenko–Pastur) tells you which eigenvalues are just n
 model: SVD says every matrix acts as a rotation, then stretching along perpendicular axes by the singular values, then another rotation. Keeping only the largest singular values gives the best low-rank approximation, which is how PCA, image compression and recommender systems squeeze out the signal and drop noise.
 ```
 
+```recall Linear algebra
+? Eigenvectors, the SVD and PCA.
+An eigenvector is a direction a linear map only scales. The singular value decomposition, A equals U Sigma V transpose, works for any matrix. Principal component analysis takes the eigenvectors of the covariance matrix.
+```
+
 ```cards
 Eigenvector :: Direction a linear map only scales.
 SVD :: A = UΣVᵀ; works for any matrix.

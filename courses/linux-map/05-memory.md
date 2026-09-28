@@ -92,6 +92,11 @@ During trading: no `malloc`, no new pages, no surprises.
 model: A general-purpose allocator can take locks, search free lists, or ask the kernel for more memory, and freshly obtained pages page-fault on first touch. All of that makes timing unpredictable, so you preallocate pools at startup and reuse objects during trading.
 ```
 
+```recall Memory costs
+? The memory events that cost you latency, and the fixes.
+A page fault means the kernel must intervene; mlock pins memory so it never swaps. Huge pages mean fewer TLB misses. On NUMA machines, remote memory is slower than local. False sharing is two cores writing different variables on the same cache line.
+```
+
 ```cards
 Page fault :: Touching memory that isn't mapped yet — the kernel must intervene.
 mlock / mlockall :: Pin memory in RAM; never swap it.

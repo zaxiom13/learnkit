@@ -64,6 +64,11 @@ section: The landscape
 > Analysis meets physics: Fourier's idea that any wave is a sum of circles. It's one of the most-used ideas in all of maths.
 ```
 
+```recall Structures
+? The objects that unify mathematics.
+A group is a set with an associative operation, an identity and inverses: the language of symmetry. A manifold is a space that looks locally like flat space. Galois theory links the roots of polynomials to symmetry groups.
+```
+
 ```cards
 Group :: A set with an associative operation, identity and inverses — the language of symmetry.
 Manifold :: A space that looks locally like ℝⁿ.

@@ -2,6 +2,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, test } from "vitest";
 import { buildCourses, checkAnswer } from "../src/lib/parse";
+import { reconcile } from "../src/lib/recall";
 
 const root = join(__dirname, "..", "courses");
 const files: Record<string, string> = {};
@@ -20,6 +21,14 @@ describe("courses", () => {
         expect(l.blocks.filter((b) => b.kind !== "html").length).toBeGreaterThan(1);
       });
       for (const b of l.blocks) {
+        if (b.kind === "recall") {
+          test(`${b.id}: recall text can be typed to completion`, () => {
+            // Strict: typing the exact text completes it. Lenient: typing it without punctuation does too.
+            expect(reconcile(b.text, "", b.text, { autocorrect: false })).toBe(b.text);
+            const bare = b.text.replace(/[\p{P}\p{S}]/gu, "").toLowerCase();
+            expect(reconcile(b.text, "", bare, { autocorrect: true })).toBe(b.text);
+          });
+        }
         if (b.kind === "answer") {
           test(`${b.id}: every accepted answer is accepted`, () => {
             for (const a of b.accept) if (typeof a === "string") expect(checkAnswer(b, a)).toBe(true);

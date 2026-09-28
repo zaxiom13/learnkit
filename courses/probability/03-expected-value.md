@@ -41,6 +41,11 @@ hint: Winning: +£148 with probability 1/100. Losing: −£2 with probability 99
 > The law of large numbers, live: averages of random samples converge on the true value, with error ∝ 1/√N.
 ```
 
+```recall Expected value
+? What expected value is, and what it isn't.
+Expected value is the sum of each value times its probability, over every outcome. A negative expected value means you lose on average. It says nothing certain about a single play, only about the long-run average.
+```
+
 ```cards
 Expected value :: Sum of (value × probability) over every outcome.
 Negative EV :: On average you lose — the house edge.

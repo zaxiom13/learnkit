@@ -85,6 +85,12 @@ So the optimiser reasons: "x + 1 < x is always false" and deletes the check.
 Lesson: UB isn't "crashes sometimes", it's "the compiler may assume it never happens". Sanitisers (`-fsanitize=undefined,address`) catch it.
 ```
 
+```recall What compilers do
+? Four optimisations and ideas worth naming.
+Inlining replaces a call with the function body. SIMD runs one instruction on many data lanes. Profile-guided optimisation recompiles using a profile of real runs. The compiler may assume undefined behaviour never happens.
+> That last sentence is why undefined behaviour bugs can look like the compiler deleted your code.
+```
+
 ```cards
 LLVM :: Shared compiler infrastructure behind Clang, Rust, Swift.
 Inlining :: Replace a call with the function body.

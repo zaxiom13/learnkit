@@ -61,6 +61,11 @@ Tools you'll hear: **DFT** (density functional theory — the workhorse of compu
 model: Superconductivity: nothing in the Schrödinger equation for a single electron hints at zero resistance or flux expulsion. It arises from collective pairing of trillions of electrons, and its key properties (like flux quantisation h/2e) are exact regardless of the material's details. Knowing the fundamental laws doesn't let you construct the phenomenon without new concepts at the collective level.
 ```
 
+```recall Emergence
+? How collective behaviour creates new physics.
+A quasiparticle is a collective excitation that behaves like a particle. A band gap separates filled and empty energy bands, and decides metal, semiconductor or insulator. In BCS theory, electrons form Cooper pairs bound by phonons, giving superconductivity.
+```
+
 ```cards
 Quasiparticle :: A collective excitation that behaves like a particle.
 Band gap :: Energy gap separating filled and empty bands.

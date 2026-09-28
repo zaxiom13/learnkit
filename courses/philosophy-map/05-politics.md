@@ -64,6 +64,11 @@ section: Acting
 model: Social contract theories say a government is legitimate because free people would agree to it. Hobbes thought people would give up almost everything for security, justifying a strong sovereign; Locke thought they'd only agree to a limited government that protects rights, and could overthrow one that doesn't.
 ```
 
+```recall Power and justice
+? Four classic answers about the state and the market.
+Hobbes: a strong state saves us from the war of all against all. Mill's harm principle: liberty may be limited only to prevent harm to others. Rawls: choose rules from behind a veil of ignorance. Smith: self-interest can serve the common good through markets.
+```
+
 ```cards
 Leviathan :: Hobbes: strong state to escape the war of all against all.
 Harm principle :: Mill: liberty limited only to prevent harm.

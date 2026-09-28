@@ -11,6 +11,7 @@
 //   ```reveal Label   hidden content behind a button
 //   ```reflect     "explain it back": free text + a self-check rubric
 //   ```order       put the lines in the right order
+//   ```recall Title   type a passage from memory, with first-letter scaffolding
 //   ```viz name key=value ...   an interactive visualisation (see VIZ below); body lines are data, "> " lines a caption
 import { marked, type Token, type Tokens } from "marked";
 
@@ -23,6 +24,7 @@ export type Block =
   | { kind: "reveal"; id: string; label: string; html: string }
   | { kind: "reflect"; id: string; prompt: string; rubric: string[]; model: string }
   | { kind: "order"; id: string; prompt: string; items: string[]; explain: string }
+  | { kind: "recall"; id: string; title: string; prompt: string; text: string; explain: string }
   | { kind: "viz"; id: string; name: string; opts: Record<string, string>; lines: string[]; caption: string };
 
 /** Every visualisation the app knows how to draw (src/ui/viz/). */
@@ -146,6 +148,19 @@ function parseBlock(lang: string, body: string, id: string, where: string): Bloc
       if (items.length < 3) throw new FormatError(`${where}: an order block needs at least three numbered lines, in the correct order.`);
       return { kind, id, prompt: md(s.prompt), items, explain: md(s.explain) };
     }
+    case "recall": {
+      // Everything that isn't a "? prompt" or "> explanation" line is the text to recall, verbatim.
+      const text = body
+        .split("\n")
+        .filter((l) => !l.startsWith("? ") && !l.startsWith("> ") && l !== ">")
+        .map((l) => l.replace(/\s+$/, ""))
+        .join("\n")
+        .trim()
+        .replace(/\n{3,}/g, "\n\n");
+      if (!text) throw new FormatError(`${where}: a recall block needs the text to recall.`);
+      if (text.length > 1200) throw new FormatError(`${where}: keep recall text under 1200 characters (split it into several blocks).`);
+      return { kind, id, title: args.join(" "), prompt: md(s.prompt), text, explain: md(s.explain) };
+    }
     case "viz": {
       const name = args[0] ?? "";
       if (!(VIZ as readonly string[]).includes(name)) throw new FormatError(`${where}: unknown visualisation "${name}".`);
@@ -158,7 +173,7 @@ function parseBlock(lang: string, body: string, id: string, where: string): Bloc
   throw new FormatError(`${where}: unknown block type "${kind}".`);
 }
 
-const BLOCKS = new Set(["choice", "answer", "cards", "steps", "reveal", "reflect", "order", "viz"]);
+const BLOCKS = new Set(["choice", "answer", "cards", "steps", "reveal", "reflect", "order", "recall", "viz"]);
 
 export function parseLesson(course: string, file: string, src: string, n: number): Lesson {
   const [meta, body] = frontMatter(src.replace(/\r/g, ""));

@@ -83,6 +83,11 @@ section: The landscape
 - [ ] Hume: causation is habit
 ```
 
+```recall The branches
+? The main branches of philosophy, one line each.
+Metaphysics asks what exists. Epistemology asks what we can know. Ethics asks how we should act. Logic asks what follows from what. Descartes: I think, therefore I am.
+```
+
 ```cards
 Metaphysics :: What exists and what it's like.
 Epistemology :: Theory of knowledge.

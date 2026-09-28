@@ -91,6 +91,11 @@ hint: "isolate CPUs"
 model: Average latency smooths away the rare stalls; p99.9 tells you the slowest 1 in 1000 events. In trading, bursts of activity are when money is made or lost — and those are exactly when stalls tend to hit — so you engineer for a tight, predictable tail, not a good average.
 ```
 
+```recall Taming jitter
+? The kernel knobs that keep a hot core quiet.
+isolcpus keeps the scheduler off reserved cores. nohz_full stops the timer tick on single-task cores. IRQ affinity moves hardware interrupts elsewhere. Busy polling spins instead of sleeping, trading a core for lower latency.
+```
+
 ```cards
 Jitter :: Variation in latency; the real enemy in HFT.
 isolcpus :: Boot param reserving cores away from the scheduler.

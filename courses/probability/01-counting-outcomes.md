@@ -68,6 +68,11 @@ hint: How many pairs add up to 2?
 > Totals near the middle have the most combinations; the extremes 2 and 12 have just one each.
 ```
 
+```recall The definition
+? The definition of probability for equally likely outcomes.
+The probability of an event is the number of favourable outcomes divided by the number of equally likely outcomes. Two dice give 36 outcomes, and 7 is the most likely total, with 6 ways out of 36.
+```
+
 ```cards
 Probability of an event :: Favourable outcomes ÷ all equally likely outcomes.
 Outcomes for two dice :: 36 (6 × 6).

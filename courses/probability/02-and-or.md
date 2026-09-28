@@ -75,3 +75,9 @@ If two events are **mutually exclusive**, P(A or B) = P(A) + P(B).
 - mentions subtracting the overlap
 model: You can simply add when the events can't happen together. If they overlap — like drawing a heart or a king — adding counts the king of hearts twice, so you subtract the overlap: 13/52 + 4/52 − 1/52 = 16/52.
 ```
+
+```recall The three rules
+? When to multiply, when to add, and the complement trick.
+For independent events, the probability of A and B is the product. For events that can't both happen, the probability of A or B is the sum. The probability of not A is one minus the probability of A.
+> For any "at least one" question, reach for the complement first.
+```

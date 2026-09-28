@@ -87,6 +87,12 @@ hint: The dimension of the key vectors.
 model: Backprop is reverse-mode automatic differentiation: you run the network forward, then apply the chain rule backwards through the graph, accumulating ∂loss/∂parameter for every parameter in one sweep. It costs only a few times a forward pass, which is why training networks with billions of parameters is feasible.
 ```
 
+```recall The core loop
+? How a model learns, and what can go wrong.
+The loss measures how wrong the model is. Gradient descent steps the parameters downhill along the negative gradient of the loss. Overfitting is memorising the training set and failing on new data.
+> Everything from linear regression to LLM pre-training is this loop at a different scale.
+```
+
 ```cards
 Loss :: Number measuring how wrong the model is.
 Gradient descent :: Step parameters downhill along −∇loss.

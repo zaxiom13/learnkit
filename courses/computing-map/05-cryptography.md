@@ -94,6 +94,11 @@ Client and server do an **ECDH key exchange**; the server **signs** it with the 
 model: Encryption is reversible if you have the key; hashing is one-way. Servers store salted password hashes so a database leak doesn't reveal passwords. They use deliberately slow, memory-hard hashes like Argon2 so attackers can't try billions of guesses per second.
 ```
 
+```recall The toolbox
+? What each core cryptographic tool gives you.
+AES encrypts with a shared secret key. Diffie-Hellman agrees a shared secret over a public channel. A digital signature proves who signed and that the data wasn't changed. A certificate binds a public key to an identity, signed by a certificate authority.
+```
+
 ```cards
 AES :: The standard symmetric block cipher.
 Diffie–Hellman :: Agree a shared secret over a public channel.

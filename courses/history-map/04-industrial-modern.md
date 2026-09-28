@@ -76,6 +76,11 @@ Year 1 | 467
 model: In 1992 the High Court, in a case led by Eddie Mabo of the Meriam people, rejected the doctrine that Australia had been "nobody's land" when the British arrived, recognising that native title could survive. It led to the Native Title Act 1993 and reshaped Australian law and history.
 ```
 
+```recall Revolutions
+? The political and industrial turning points, with Australia's place in them.
+The French Revolution began in 1789. Watt's steam engine powered the first industrial revolution, and after about 1800 the West pulled ahead in the Great Divergence. Australia federated on 1 January 1901, and Mabo overturned terra nullius in 1992.
+```
+
 ```cards
 1789 :: French Revolution.
 Watt's steam engine :: Heart of the first industrial revolution.
