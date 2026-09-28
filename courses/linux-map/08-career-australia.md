@@ -70,6 +70,12 @@ section: Career
 model: "Kernel bypass: normally a packet goes through the kernel's network stack and a syscall before our code sees it, costing microseconds. With something like ef_vi or DPDK the NIC's queues are mapped into our process and a pinned thread spins reading them directly. It's much faster and more predictable, but you give up the kernel's conveniences and burn a whole core polling, so we use it only on the hot path."
 ```
 
+```recall Your pitch
+? The roles, and where they are in Australia.
+Low-latency developers write the trading hot path. Trading infrastructure engineers tune IRQs, NUMA, PTP and kernel bypass. SREs keep systems reliable at scale. In Australia, the exchanges are the ASX and Cboe Australia.
+> Check current listings: firms and roles change, but these job shapes are stable.
+```
+
 ```cards
 Low-latency dev :: Writes the trading hot path; lives in caches, memory and networking.
 Trading infra engineer :: Tunes boxes/networks: IRQs, NUMA, PTP, bypass.

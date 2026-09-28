@@ -89,6 +89,11 @@ Today: macOS is certified UNIX (BSD heritage via Darwin); Linux runs essentially
 model: Unix was small, written in a portable language, and built on a few powerful abstractions — files, processes, pipes. Universities got the source cheaply, trained generations on it, and BSD and GNU/Linux turned it into something anyone could use and extend for free.
 ```
 
+```recall Where it came from
+? The lineage of the systems you use every day.
+Thompson and Ritchie built Unix at Bell Labs in 1969, and Ritchie's C made it portable. Stallman started GNU in 1983. Torvalds wrote the Linux kernel in 1991. The GPL is copyleft: if you distribute a modified version, it must stay free.
+```
+
 ```cards
 Unix :: 1969, Bell Labs, Thompson & Ritchie.
 C :: Ritchie's language (1972) — made Unix portable.

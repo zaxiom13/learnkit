@@ -8,6 +8,7 @@
   import Steps from "./Steps.svelte";
   import Reflect from "./Reflect.svelte";
   import Order from "./Order.svelte";
+  import Recall from "./Recall.svelte";
   import Viz from "./viz/Viz.svelte";
 
   const files = import.meta.glob("../../courses/*/*.md", { query: "?raw", import: "default", eager: true }) as Record<string, string>;
@@ -29,7 +30,7 @@
   });
 
   const key = (l: Lesson) => `${l.course}/${l.id}`;
-  const gradable = (l: Lesson) => l.blocks.filter((b) => b.kind === "choice" || b.kind === "answer" || b.kind === "order");
+  const gradable = (l: Lesson) => l.blocks.filter((b) => b.kind === "choice" || b.kind === "answer" || b.kind === "order" || b.kind === "recall");
   const lessonPct = $derived.by(() => {
     if (!lesson) return 0;
     const g = gradable(lesson);
@@ -84,6 +85,7 @@
           {:else if b.kind === "steps"}<Steps {b} />
           {:else if b.kind === "reflect"}<Reflect {b} />
           {:else if b.kind === "order"}<Order {b} />
+          {:else if b.kind === "recall"}<Recall {b} />
           {:else if b.kind === "viz"}<Viz {b} />
           {:else if b.kind === "reveal"}
             <details class="card reveal"><summary>{b.label}</summary><div class="prose">{@html b.html}</div></details>

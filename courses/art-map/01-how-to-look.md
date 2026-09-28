@@ -61,6 +61,12 @@ Composition: "window on the left third, map on the back wall, deep stillness".
 - [ ] Pointillism // Dots of pure colour.
 ```
 
+```recall Three questions
+? The three questions to ask of any work of art, in order.
+What do I see? How is it made and arranged? What does it mean, and in what context?
+> Describe before you interpret: most bad readings of art skip straight to question three.
+```
+
 ```cards
 Chiaroscuro :: Light–dark modelling of form.
 Sfumato :: Leonardo's soft, smoky transitions.

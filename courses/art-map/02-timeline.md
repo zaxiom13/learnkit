@@ -73,6 +73,12 @@ section: Seeing
 model: Once photography could capture appearances exactly, faithful representation stopped being painting's unique job. Artists turned toward what cameras couldn't do: the sensation of light (Impressionists), structure (Cézanne), emotion (Van Gogh) and eventually abstraction — while borrowing photography's cropped, off-centre compositions.
 ```
 
+```recall The Western arc
+? Five movements, each with the thing it cared about most.
+Classical sculpture found contrapposto. The Renaissance found linear perspective. The Baroque chased drama and strong light. Romanticism chased emotion and the sublime. Impressionism chased light and the passing moment.
+> One word per movement is a hook you can hang everything else on.
+```
+
 ```cards
 Contrapposto :: Weight on one leg; relaxed classical pose.
 Linear perspective :: Parallel lines meet at a vanishing point.

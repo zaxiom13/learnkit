@@ -75,6 +75,11 @@ tolerance: 0.01
 model: Implied volatility is the volatility you plug into Black–Scholes to reproduce an option's market price. If the model were right, it would be the same for every strike. It isn't: out-of-the-money puts trade at higher implied vol — the skew — because the market prices in fat tails and crash risk, and because investors pay up for downside protection.
 ```
 
+```recall Pricing by replication
+? The key idea behind option pricing.
+A call is the right to buy at the strike; a put is the right to sell. If you can replicate an option with the underlying and cash, its price must match the replication, or there is arbitrage. Delta hedging is that replication done continuously.
+```
+
 ```cards
 Call / put :: Right to buy / sell at the strike.
 Arbitrage :: Riskless profit; pricing forbids it.

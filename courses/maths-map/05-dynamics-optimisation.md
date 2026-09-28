@@ -69,6 +69,11 @@ Deterministic but unpredictable: tiny differences grow exponentially (positive *
 model: Chaotic systems follow exact deterministic rules — rerun with identical starting conditions and you get identical results. But errors grow exponentially, so any imprecision ruins long-range prediction. Structure survives: trajectories stay on a strange attractor and have stable statistics, which is why climate is predictable even though weather two weeks out isn't.
 ```
 
+```recall Chaos and optimisation
+? Three results to carry around.
+A positive Lyapunov exponent means nearby trajectories diverge exponentially: chaos. In a convex problem, every local minimum is a global minimum. Monte Carlo error shrinks like one over the square root of N, whatever the dimension.
+```
+
 ```cards
 Lyapunov exponent :: Rate of exponential divergence of nearby trajectories.
 Feigenbaum δ :: ≈ 4.669; universal period-doubling ratio.

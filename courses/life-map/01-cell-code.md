@@ -57,6 +57,11 @@ Function | enzyme, motor, receptor, antibody…
 model: DNA stores instructions, RNA copies carry them out of the nucleus, ribosomes interpret them into proteins that do the work, and regulatory networks act like control flow. But the cell is massively parallel, noisy and chemical; the "code" also physically builds its own hardware; and it was shaped by evolution, so it's full of redundancy and hacks rather than clean design.
 ```
 
+```recall The central dogma
+? How information flows in a cell, and the size of the code.
+DNA is transcribed into RNA, and RNA is translated into protein. Each codon of three bases codes for one amino acid. The human genome has about 3.1 billion base pairs and about 20,000 protein-coding genes.
+```
+
 ```cards
 Central dogma :: DNA → RNA → protein.
 Codon :: Three bases coding one amino acid.

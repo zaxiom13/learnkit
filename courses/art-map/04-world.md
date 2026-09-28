@@ -51,6 +51,12 @@ section: Seeing
 = Katsushika Hokusai
 ```
 
+```recall Beyond the West
+? Four traditions outside Europe, one line each.
+Ukiyo-e are Japanese woodblock prints of the floating world. Shan shui is Chinese mountain-water ink landscape. Arabesque is flowing Islamic vegetal ornament. Rarrk is the cross-hatching of Arnhem Land.
+> Japonisme is the reminder that influence flowed both ways: these prints reshaped 19th-century European painting.
+```
+
 ```cards
 Ukiyo-e :: Japanese "floating world" woodblock prints.
 Shan shui :: Chinese "mountain-water" ink landscape.

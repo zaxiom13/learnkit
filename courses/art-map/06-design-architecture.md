@@ -74,6 +74,12 @@ section: Making
 model: In a banking app, the "Pay" button has strong hierarchy — large, high-contrast, bottom-right under the thumb (good Fitts' law). But the settings menu lists 25 options in one flat list, slowing decisions (Hick's law); grouping them into five sections would help.
 ```
 
+```recall Design principles
+? Three ideas that connect buildings, products and screens.
+Form follows function. An affordance is what an object signals it can do. Fitts' law says the time to hit a target grows with distance and shrinks with size.
+> Sullivan's motto, Norman's affordances and Fitts' law cover a surprising share of UI critique.
+```
+
 ```cards
 Form follows function :: Sullivan's modernist motto.
 Flying buttress :: External support enabling Gothic windows.

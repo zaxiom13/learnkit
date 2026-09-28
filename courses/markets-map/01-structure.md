@@ -76,6 +76,11 @@ Average price = (100×10.00 + 150×10.01)/250 = 10.006. The difference from 10.0
 model: A market maker continuously posts prices to buy and sell, providing liquidity so others can trade instantly. It earns a small spread on each round trip. The risk is ending up with inventory just as prices move, especially against informed traders, so it hedges quickly, updates quotes in microseconds, and relies on huge volume and tight risk control.
 ```
 
+```recall The order book
+? How a limit order book matches trades.
+The bid is the best price to sell to; the ask is the best price to buy from. The spread is ask minus bid. Orders are matched by price-time priority: better price first, then earlier order. Market makers earn the spread but risk adverse selection.
+```
+
 ```cards
 Bid / ask :: Best price to sell to / buy from.
 Spread :: Ask − bid.

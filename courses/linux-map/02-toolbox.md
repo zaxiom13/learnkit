@@ -98,6 +98,11 @@ hint: systemd's journal.
 model: Build small tools that each do one thing well, and connect them with text streams. Because the pieces are standard and composable, I can describe the pipeline in plain words and an AI can assemble it reliably.
 ```
 
+```recall The toolbox
+? Which tool answers which question.
+strace shows what a process is asking the kernel. perf profiles where the CPU time goes. ss inspects sockets. journalctl reads service logs. An exit code of zero means success; anything else is failure.
+```
+
 ```cards
 strace :: Traces a process's system calls — "what is it asking the kernel?"
 perf :: Linux's profiler: CPU samples, cache misses, hardware counters.

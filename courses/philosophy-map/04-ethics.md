@@ -58,6 +58,11 @@ section: Acting
 model: A utilitarian car would minimise total harm — swerving to hit one person rather than five. A Kantian would object that deliberately steering into someone uses them as a means, and might say the car should not actively redirect harm. The utilitarian answer is clearer to program, but people say they wouldn't buy a car that might sacrifice them.
 ```
 
+```recall Three ethical theories
+? The big three, plus Hume's warning.
+Utilitarianism: maximise total well-being. Deontology: duties and rights constrain what we may do. Virtue ethics: act from good character. Hume's is-ought gap: facts alone don't yield obligations.
+```
+
 ```cards
 Utilitarianism :: Maximise total well-being.
 Deontology :: Duties and rights constrain action.

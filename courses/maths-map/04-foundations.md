@@ -75,6 +75,11 @@ Maths about **structure-preserving maps** rather than objects: objects, arrows (
 model: All three use diagonalisation: assume a complete list (of reals, proofs, or halting-deciders), then construct something that disagrees with every entry — a real differing in the nth digit, a sentence asserting its own unprovability, a program that does the opposite of what the decider predicts. The contradiction shows the list can't be complete.
 ```
 
+```recall The limits of proof
+? Cantor and Godel, in three sentences.
+Cantor showed some infinities are larger than others: the real numbers are uncountable. Godel's first theorem: any consistent system for arithmetic has true statements it cannot prove. His second: it cannot prove its own consistency.
+```
+
 ```cards
 Cantor :: Some infinities are larger; ℝ is uncountable.
 Gödel I :: Consistent arithmetic has unprovable truths.

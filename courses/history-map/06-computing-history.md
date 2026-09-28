@@ -84,6 +84,11 @@ NVIDIA B200 (2024) | 208000000000
 model: TCP/IP followed the end-to-end principle — the network just moves packets and all intelligence lives at the edges — so anyone could build new applications without permission. Open, freely implementable standards and origins in government and academia meant no single company controlled it, and the Web added an equally open publishing layer.
 ```
 
+```recall From Lovelace to transformers
+? The milestones of computing history.
+Ada Lovelace published the first algorithm for a machine in 1843. Bell Labs built the transistor in 1947. ARPANET, the ancestor of the internet, went live in 1969. The transformer architecture behind LLMs arrived in 2017.
+```
+
 ```cards
 Ada Lovelace :: First published algorithm for a machine (1843).
 Transistor :: Bell Labs, 1947.

@@ -61,6 +61,12 @@ tolerance: 0.05
 model: I'd start with why it should work — who's on the other side and why they'd pay. Then show it was developed on one period and tested untouched on another, that performance is stable when parameters are nudged, that it has few knobs, and that results survive realistic costs and impact with point-in-time data free of look-ahead and survivorship bias.
 ```
 
+```recall Strategy families
+? The main families of quant strategy, and how to judge them.
+Statistical arbitrage trades the mean reversion of related assets. Momentum bets that recent winners keep winning. Carry earns the yield differential. The Sharpe ratio is excess return divided by volatility.
+> And the honest truth: most backtests that look great are overfitting or survivorship bias.
+```
+
 ```cards
 Stat arb :: Trade mean reversion of related assets.
 Momentum :: Recent winners tend to keep winning.

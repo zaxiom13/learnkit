@@ -89,6 +89,21 @@ Term :: Definition
 ```
 ````
 
+### `recall` — type it from memory (completion-based)
+
+````markdown
+```recall Optional title
+? The cue shown above the box (Markdown allowed).
+The exact text the learner types from memory.
+It can span several lines; keep it under 1200 characters.
+> Shown when they finish.
+```
+````
+
+The learner types the passage; correct letters lock in and a wrong letter shows in red until deleted. Scaffolding fades across three levels: **Read** (type over the full text) → **First letters** (each word's first letter plus blanks) → **From memory**. "Ignore case & punctuation" is on by default, so punctuation types itself. 💡 or <kbd>Tab</kbd> fills in the next word. Points are awarded on the first finish at *First letters* or harder.
+
+Write recall text in plain words (spell out symbols: "S equals k ln Omega", not "S = k ln Ω"), one to three sentences: a definition, a law, a summary line worth knowing word for word.
+
 ### `reflect` — explain it back, then self-check
 
 ````markdown
@@ -149,7 +164,8 @@ Use theme colours (`var(--accent)`, `var(--coral)`, `var(--good)`, `var(--warn)`
 4. **Questions that teach.** Wrong options should be tempting mistakes, with a `//` note explaining why.
 5. **Explain it back** at least once per lesson (`reflect`) — retrieval beats rereading.
 6. **Show, don't just tell.** Aim for at least two visuals per lesson: a `viz` to play with, plus a diagram or data chart.
-7. **End with `cards`** for the 3–6 facts worth remembering.
-8. For **interview prep**: include realistic prompts, a framework, and model answers spoken the way a strong candidate would.
+7. **Recall the core idea.** One `recall` block per lesson: the lesson's key statement, typed from memory, just before the cards.
+8. **End with `cards`** for the 3–6 facts worth remembering.
+9. For **interview prep**: include realistic prompts, a framework, and model answers spoken the way a strong candidate would.
 
 Run `npm test` — it checks every course parses and every accepted answer is actually accepted.

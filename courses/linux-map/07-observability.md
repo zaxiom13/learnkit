@@ -92,6 +92,11 @@ hint: extended Berkeley Packet Filter.
 model: First I check utilisation, saturation and errors for each resource — CPU, memory, disk, network — to see which is the bottleneck. Then I use the matching tool: perf for CPU hot spots, eBPF tools for scheduler or I/O latency, ss/tcpdump for network. I narrow to the specific function or wait, change one thing, and re-measure against the same percentile.
 ```
 
+```recall Seeing inside
+? How to look inside a running system.
+perf samples where time goes, and in a flame graph width is time. eBPF runs verified programs inside the kernel for low-overhead tracing. The USE method checks utilisation, saturation and errors for every resource.
+```
+
 ```cards
 perf :: Linux profiler: sampling + hardware counters.
 Flame graph :: Width = time spent; find the wide plateaus.

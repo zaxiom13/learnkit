@@ -51,6 +51,11 @@ section: Knowing
 model: In special relativity, whether two distant events are simultaneous depends on your motion, so there's no universal "now" dividing past from future. If a moving observer's "now" includes events in my future, it's hard to say only the present exists, so many conclude all of spacetime is equally real — the block universe.
 ```
 
+```recall Time and number
+? Two puzzles where philosophy meets physics and maths.
+The past hypothesis says the universe began in a state of very low entropy, and that explains time's arrow. Platonism holds that mathematical objects exist independently of us. Wigner called the success of maths in physics unreasonably effective.
+```
+
 ```cards
 Block universe :: Past, present and future equally real.
 Past hypothesis :: Low-entropy start explains time's arrow.

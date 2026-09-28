@@ -65,3 +65,9 @@ hint: 1 billion KB = 1,000,000,000 KB. How many KB in a TB? (1 TB = 1 billion KB
 - [ ] You need a global CDN before anything else
 > Estimates stop you from over- or under-building. Three requests a second is tiny.
 ```
+
+```recall Handy constants
+? The numbers that make estimates quick.
+A day has 86,400 seconds, so call it 100,000. A month is about 2.5 million seconds. Peak traffic is often two to three times the average.
+> With these, requests per second is just daily total divided by 100,000.
+```

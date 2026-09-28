@@ -149,6 +149,11 @@ The syscalls: **`clone`** (create a process in new namespaces), **`unshare`** (m
 model: A container is a normal Linux process that shares the host kernel. Namespaces give it its own view of PIDs, network, mounts and hostname; cgroups cap how much CPU, memory and I/O it can consume; and it runs from a packaged filesystem image, usually with seccomp and dropped capabilities to restrict syscalls.
 ```
 
+```recall Containers, really
+? What a container is made of.
+Cgroups limit what a process can use: CPU, memory and which cores. Namespaces limit what a process can see: processes, network, mounts, hostname and users. A container is just a process with both applied.
+```
+
 ```cards
 cgroup v2 location :: /sys/fs/cgroup — a directory per group, files as settings.
 cpu.max :: "quota period" hard CPU cap; over it → throttled.

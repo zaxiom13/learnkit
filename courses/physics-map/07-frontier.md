@@ -80,6 +80,11 @@ Quant finance (stochastic calculus, Monte Carlo, statistics), ML research, quant
 model: Quantum gravity is hard because the energies where it matters (~10¹⁹ GeV) are fifteen orders of magnitude beyond colliders, so we have almost no data. Naively quantising GR gives non-renormalisable infinities; string theory fixes that but has a vast landscape of solutions and few testable predictions; loop quantum gravity struggles to recover smooth spacetime.
 ```
 
+```recall The open problems
+? The biggest mismatches in fundamental physics.
+Quantum gravity matters at the Planck scale, about 10 to the minus 35 metres. The cosmological constant problem: predicted vacuum energy is off by about 120 orders of magnitude. The hierarchy problem: why is the Higgs so light?
+```
+
 ```cards
 Planck scale :: ~10⁻³⁵ m, ~10¹⁹ GeV — where quantum gravity matters.
 AdS/CFT :: Gravity in the bulk ≡ QFT on the boundary.

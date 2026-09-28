@@ -86,6 +86,12 @@ Column store + compression + time partition pruning | 0.4 | skip years you didn'
 model: An index is an extra sorted structure (usually a B-tree) pointing into the table, so finding a row takes a few steps instead of scanning everything. But every insert, update or delete must also update each index, so more indexes means slower writes and more storage.
 ```
 
+```recall ACID
+? The four guarantees of a database transaction.
+Atomic: all or nothing. Consistent: rules hold before and after. Isolated: concurrent transactions don't see each other's half-finished work. Durable: once committed, it survives a crash.
+> Write skew is the classic way weaker isolation levels break the I in ACID.
+```
+
 ```cards
 OLTP vs OLAP :: Many small transactions vs big analytical queries.
 B-tree :: Balanced sorted tree; the default index.

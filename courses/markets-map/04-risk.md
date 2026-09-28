@@ -68,6 +68,11 @@ To maximise long-run growth, bet a fraction f* = edge/odds (for simple bets) —
 model: VaR tells you the loss you won't exceed 99% of the time but nothing about how bad the other 1% is — and that's where firms die. It's often computed from calm historical data or Gaussian assumptions, so it understates fat tails, and positions can be arranged to look safe under VaR while hiding huge tail risk. Pair it with expected shortfall and stress tests.
 ```
 
+```recall Measuring and sizing risk
+? Portfolio risk in four definitions.
+Diversification lowers risk by combining imperfectly correlated assets. Value at risk is a loss threshold at a confidence level, and expected shortfall is the average loss beyond it. The Kelly criterion gives the growth-optimal bet size, but use a fraction of it.
+```
+
 ```cards
 Diversification :: Lower risk via imperfectly correlated assets.
 Beta :: Sensitivity to the market.

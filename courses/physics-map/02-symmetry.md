@@ -107,6 +107,12 @@ top quark | 172.7
 model: The electron's wavefunction can be multiplied by a phase without changing physics. If we insist that phase can vary from point to point, ordinary derivatives break the symmetry. To fix that we must add a new field that shifts to compensate — the electromagnetic potential. Give it the simplest allowed dynamics and you get Maxwell's equations. The force is the price of local symmetry.
 ```
 
+```recall Noether's theorem
+? The link between symmetry and conservation.
+Every continuous symmetry gives a conservation law. Time symmetry gives conservation of energy, space symmetry gives momentum, and rotation symmetry gives angular momentum.
+> Gauge theory pushes the same idea further: making a symmetry local demands a force field.
+```
+
 ```cards
 Noether's theorem :: Continuous symmetry ⇒ conservation law.
 Gauge field :: Field required to make a symmetry local; a force carrier.

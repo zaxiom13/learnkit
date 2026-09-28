@@ -93,6 +93,11 @@ tolerance: 10
 model: If a loop branches on the value (e.g. "if x > 128"), sorted data makes the outcome a long run of false then true, which the predictor learns perfectly. Random data makes it a coin flip, so about half the branches mispredict, each flushing the pipeline — often several times slower overall.
 ```
 
+```recall Latency and the CPU
+? The memory gap and how CPUs hide it.
+An L1 cache hit takes about a nanosecond and DRAM about a hundred, a hundredfold gap. Branch prediction guesses which way a branch goes to keep the pipeline full. Out-of-order execution runs ready instructions early and retires them in order.
+```
+
 ```cards
 L1 vs DRAM :: ~1 ns vs ~100 ns — a 100× gap.
 Branch prediction :: CPU guesses branch direction to keep the pipeline full.

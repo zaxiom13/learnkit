@@ -80,6 +80,11 @@ section: Seeing
 model: Conceptual and generative art already separated the idea from the hand: LeWitt wrote instructions, Molnár wrote code. By that lineage, what matters is the choices — framing, selection, context. An AI image can be art when someone makes meaningful choices with it; the tool doesn't disqualify it, though uncurated output with no intent is closer to wallpaper.
 ```
 
+```recall Modernism in a breath
+? The key moves of modern art, from Cubism to Conceptual art.
+Cubism showed many viewpoints at once. Duchamp's readymade made a found object art. Abstract Expressionism was gesture and colour. Pop Art took mass culture as its subject. In Conceptual art, the idea is the work.
+```
+
 ```cards
 Cubism :: Multiple viewpoints at once.
 Readymade :: Found object declared art (Duchamp).

@@ -113,6 +113,11 @@ They all agree on predictions (except collapse models, in principle).
 model: Two entangled particles give measurement results that are correlated in a way no pre-agreed classical plan can reproduce — that's what Bell tests show. But each person alone just sees random results; only when they compare notes do the correlations appear, so you can't use it to send a message.
 ```
 
+```recall Quantum in three facts
+? The Born rule, Bell and no-cloning.
+The Born rule: probability is the squared magnitude of the amplitude. Bell's theorem: no local hidden-variable theory can reproduce quantum mechanics. The no-cloning theorem: an unknown quantum state cannot be copied.
+```
+
 ```cards
 Born rule :: Probability = |amplitude|².
 Bell's theorem :: No local hidden variables reproduce QM.

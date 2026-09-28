@@ -69,6 +69,11 @@ The same template, with **Wick rotation** t → −iτ, turns the quantum path i
 model: Instead of writing many coupled equations, you write one scalar — the Lagrangian — and demand the action be stationary; the equations of motion fall out. Symmetries of that one function give conservation laws for free, and the same template extends to fields and, via the path integral, to quantum theory.
 ```
 
+```recall The principle of least action
+? The one principle behind classical and quantum mechanics.
+The action is the integral of the Lagrangian over time, and the path a system actually takes makes the action stationary. In quantum mechanics, every path contributes, weighted by e to the i S over h-bar.
+```
+
 ```cards
 Action :: S = ∫ L dt; physical paths make it stationary.
 Euler–Lagrange :: d/dt(∂L/∂q̇) − ∂L/∂q = 0.

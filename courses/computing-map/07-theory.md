@@ -92,6 +92,11 @@ tolerance: 1
 model: If you can show your problem is NP-complete, you stop searching for a fast exact algorithm that almost certainly doesn't exist. Instead you use heuristics, approximation algorithms, exploit special structure, or reduce it to SAT or integer programming and let industrial-strength solvers do the work.
 ```
 
+```recall Limits of computation
+? Computability and complexity, in four statements.
+The halting problem is undecidable in general. NP is the class of problems whose solutions can be verified in polynomial time. NP-complete problems are the hardest in NP, and SAT was the first. Erasing a bit costs at least kT ln 2.
+```
+
 ```cards
 Church–Turing thesis :: Anything algorithmically computable is Turing-computable.
 Halting problem :: Undecidable in general.

@@ -75,6 +75,11 @@ Farming allowed **surplus** → **cities** → **specialists** (priests, soldier
 model: Acemoglu and Robinson argue institutions decide it: where power is broadly shared and property is secure (inclusive institutions), people invest and innovate; where elites extract, they don't. Critics say it's hard to separate institutions from geography and culture, which shape which institutions arise.
 ```
 
+```recall Deep time
+? Three dates that anchor the long view of history.
+Farming began in the Fertile Crescent about 12,000 years ago. Sumerian cuneiform appeared about 5,000 years ago. Aboriginal Australians have continuous cultures reaching back 50,000 to 65,000 years.
+```
+
 ```cards
 Fertile Crescent :: Where farming first began, ~12,000 years ago.
 Cuneiform :: Sumerian writing, ~5,000 years ago.

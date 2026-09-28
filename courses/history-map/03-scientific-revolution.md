@@ -81,6 +81,12 @@ section: The modern turn
 model: The new thing was a method and a culture: describe nature with mathematics, test it by experiment, and share results publicly so others can replicate them — rather than appeal to Aristotle or scripture. Newton's success, one set of laws for apples and planets, made that approach look unstoppable.
 ```
 
+```recall Four dates
+? The chain from printing to Newton.
+Gutenberg's press, 1450s. Luther and the Reformation, 1517. Copernicus puts the Sun at the centre, 1543. Newton's Principia, 1687.
+> Cheap printing is the thread: it spread the Reformation and let scientists build on each other's work.
+```
+
 ```cards
 Gutenberg :: Movable-type printing press, 1450s.
 Reformation :: 1517; Luther splits Western Christianity.

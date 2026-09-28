@@ -81,6 +81,11 @@ tolerance: 0.01
 model: In ordinary calculus, (dx)² is negligible. A Brownian increment has size about √dt, so its square is about dt — the same order as the first-order terms. Taylor-expanding to second order therefore keeps a ½f″ σ² dt term. That's Itô's lemma, and it's why, for example, the expected log-return is lower than the expected return by σ²/2.
 ```
 
+```recall The essentials
+? Bayes, the central limit theorem and martingales.
+Bayes' theorem: the posterior is proportional to the likelihood times the prior. The central limit theorem: sums of finite-variance variables tend to a Gaussian. A martingale is a process whose expected future value is its current value.
+```
+
 ```cards
 Bayes' theorem :: Posterior ∝ likelihood × prior.
 CLT :: Sums of finite-variance variables → Gaussian.

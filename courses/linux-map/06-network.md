@@ -101,6 +101,11 @@ hint: Precision Time Protocol.
 model: The exchange multicasts a market-data packet; it crosses a few metres of co-lo fibre to our NIC. A kernel-bypass stack hands it to a pinned, spinning thread, which decodes it, updates the book, and runs the strategy. If it trades, it encodes an order and sends it over the order-entry TCP session back to the exchange. We measure each hop with NIC hardware timestamps synced by PTP.
 ```
 
+```recall Faster networking
+? The families of network speed-ups.
+epoll asks which of my sockets are ready. io_uring does async I/O through shared ring buffers with fewer system calls. Kernel bypass hands the NIC to user space. Exchanges publish market data by multicast, and PTP syncs clocks to under a microsecond.
+```
+
 ```cards
 epoll :: Linux's scalable "which of my sockets are ready?" API.
 io_uring :: Async I/O through shared ring buffers; fewer syscalls.
